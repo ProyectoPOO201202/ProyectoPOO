@@ -1,45 +1,75 @@
-
-
 package dominio;
+
 
 import org.joda.time.LocalDate;
 
 
-public class Compra {
-public enum Estado {NUEVO, ANULADA, CANCELADA}	
+public class Transaccion {
 	
-	private String concepto;	
-	private int numero;
-	private LocalDate fechaEmision;
-	private String empresa;
-	private double subtotal;
-	private double igv;
-	private double total;
-	private String moneda;
-	private LocalDate fechaVencimiento;
-	private LocalDate fechaPago;
-	private Estado estado;
-	private String observaciones;
-	
-		
-	public Compra(String concepto, int numero, LocalDate fechaEmision,
+public enum Tipo {COMPRA,VENTA}	
+
+public Transaccion(String concepto, int numero, LocalDate fechaEmision,
 			String empresa, double subtotal, double igv, double total,
 			String moneda, LocalDate fechaVencimiento, LocalDate fechaPago,
-			Estado estado, String observaciones) {
-		super();
+			String observaciones, Tipo tipo) throws ParametroIncompleto {
+	super();
+	if (concepto.equals(""))
+	{		
+		throw new ParametroIncompleto("concepto");	
+	}
+	else if(String.valueOf(fechaEmision).equals(""))
+	{
+		throw new ParametroIncompleto("fecha de emision");
+	}
+	else if(String.valueOf(fechaVencimiento).equals(""))
+	{
+		throw new ParametroIncompleto("empresa");
+	}	
+	else if(String.valueOf(subtotal).equals(""))
+	{
+		throw new ParametroIncompleto("sub total");
+	}
+	else if(String.valueOf(igv).equals(""))
+	{
+		throw new ParametroIncompleto("igv");
+	}
+	else if(String.valueOf(total).equals(""))
+	{
+		throw new ParametroIncompleto("total");
+	}
+	else if(moneda.equals(""))
+	{
+		throw new ParametroIncompleto("moneda");
+	}
+	
 		this.concepto = concepto;
 		this.numero = numero;
-		this.fechaEmision = fechaEmision;
 		this.empresa = empresa;
+		this.fechaEmision = fechaEmision;
 		this.subtotal = subtotal;
 		this.igv = igv;
 		this.total = total;
 		this.moneda = moneda;
 		this.fechaVencimiento = fechaVencimiento;
 		this.fechaPago = fechaPago;
-		this.estado = estado;
 		this.observaciones = observaciones;
+		this.tipo = tipo;
+		
 	}
+	
+	private String concepto;	
+	private int numero;
+	private String empresa;
+	private LocalDate fechaEmision;	
+	private double subtotal;
+	private double igv;
+	private double total;
+	private String moneda;
+	private LocalDate fechaVencimiento;
+	private LocalDate fechaPago;
+	private String observaciones;
+	private Tipo tipo;	
+	
 	public String getConcepto() {
 		return concepto;
 	}
@@ -100,17 +130,17 @@ public enum Estado {NUEVO, ANULADA, CANCELADA}
 	public void setFechaPago(LocalDate fechaPago) {
 		this.fechaPago = fechaPago;
 	}
-	public Estado getEstado() {
-		return estado;
-	}
-	public void setEstado(Estado estado) {
-		this.estado = estado;
-	}
 	public String getObservaciones() {
 		return observaciones;
 	}
 	public void setObservaciones(String observaciones) {
 		this.observaciones = observaciones;
+	}
+	public Tipo getTipo() {
+		return tipo;
+	}
+	public void setTipo(Tipo tipo) {
+		this.tipo = tipo;
 	}
 }
 
