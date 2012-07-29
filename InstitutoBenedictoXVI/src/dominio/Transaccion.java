@@ -1,17 +1,23 @@
 package dominio;
 
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 import org.joda.time.LocalDate;
 
 
 public class Transaccion {
 	
-public enum Tipo {COMPRA,VENTA}	
+public enum Tipo {COMPRA,VENTA}
+public enum Estado {NUEVO,ANULADA,CANCELADA}	
+public enum TFiltro{CONCEPTO,NUMERO,EMPRESA,FECHAEMISION,SUBTOTAL,IGV,TOTAL,MONEDA,FECHAVENCIMIENTO,FECHAPAGO,OBSERVACIONES,TIPO,ESTADO}
 
 public Transaccion(String concepto, int numero, LocalDate fechaEmision,
 			String empresa, double subtotal, double igv, double total,
 			String moneda, LocalDate fechaVencimiento, LocalDate fechaPago,
-			String observaciones, Tipo tipo) throws ParametroIncompleto {
+			String observaciones, Tipo tipo, Estado estado) throws ParametroIncompleto {
 	super();
 	if (concepto.equals(""))
 	{		
@@ -54,6 +60,7 @@ public Transaccion(String concepto, int numero, LocalDate fechaEmision,
 		this.fechaPago = fechaPago;
 		this.observaciones = observaciones;
 		this.tipo = tipo;
+		this.estado = estado;
 		
 	}
 	
@@ -69,6 +76,30 @@ public Transaccion(String concepto, int numero, LocalDate fechaEmision,
 	private LocalDate fechaPago;
 	private String observaciones;
 	private Tipo tipo;	
+	private Estado estado;
+	
+	private List<Filtro> filtro = new ArrayList<Filtro>();
+	
+	public boolean addFiltro(TFiltro tipoFiltro,String valor)
+	{
+		Filtro cargador = new Filtro(tipoFiltro.toString(),valor);
+		filtro.add(cargador);
+		return true;		
+	}
+	
+	public int listaFiltro()
+	{
+		Filtro contenedor;
+		int contador = 0;
+		Iterator<Filtro> iterador = filtro.iterator();
+		while (iterador.hasNext())
+		{	
+			contenedor = iterador.next();
+			System.out.println(contenedor.getCodigo() + " " + contenedor.getValor() );
+			contador++;
+		}
+		return contador;
+	}
 	
 	public String getConcepto() {
 		return concepto;
@@ -141,6 +172,12 @@ public Transaccion(String concepto, int numero, LocalDate fechaEmision,
 	}
 	public void setTipo(Tipo tipo) {
 		this.tipo = tipo;
+	}
+	public Estado getEstado() {
+		return estado;
+	}
+	public void setEstado(Estado estado) {
+		this.estado = estado;
 	}
 }
 
