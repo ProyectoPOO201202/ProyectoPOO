@@ -32,11 +32,7 @@ public class CompraTest {
 		LocalDate fechaEmision = new DateTime(2012, 07, 21, 0, 0, 0, 0).toLocalDate();
 		LocalDate fechaVencimiento = new DateTime(2012, 07, 21, 0, 0, 0, 0).toLocalDate();
 		LocalDate fechaPago = new DateTime(2012, 07, 21, 0, 0, 0, 0).toLocalDate();
-<<<<<<< HEAD
 		Transaccion prueba = new Transaccion("Libreria", 1, fechaEmision, "20100070970", 80, 14.4, 94.4, monedaSoles.getDescripcion(), fechaVencimiento, fechaPago, "Orden Inicial",Tipo.COMPRA,Estado.NUEVO);
-=======
-		Transaccion prueba = new Transaccion("Libreria", 1, fechaEmision, "20100070970", 80, 14.4, 94.4, monedaSoles.getDescripcion(), fechaVencimiento, fechaPago, "Orden Inicial",Tipo.COMPRA);
->>>>>>> c4631628342ed59f2306c2b2c02d7bd3ba212e4e
 		Assert.assertEquals("Libreria", prueba.getConcepto());
 		Assert.assertEquals(1, prueba.getNumero());
 		Assert.assertEquals(fechaEmision, prueba.getFechaEmision());
