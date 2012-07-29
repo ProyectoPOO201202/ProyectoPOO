@@ -1,0 +1,193 @@
+<class-diagram version="1.0.9" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" corner="BOTTOM_RIGHT" language="java" name="dominio.Persona" project="InstitutoBenedictoXVI" 
+    file="/InstitutoBenedictoXVI/src/dominio/Persona.java" binary="false">    
+    <position height="537" width="348" x="1190" y="-77"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="2" corner="BOTTOM_RIGHT" language="java" name="dominio.Empresa" project="InstitutoBenedictoXVI" 
+    file="/InstitutoBenedictoXVI/src/dominio/Empresa.java" binary="false">    
+    <position height="554" width="387" x="1601" y="-77"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="3" corner="BOTTOM_RIGHT" language="java" name="dominio.Venta.Estado" project="InstitutoBenedictoXVI" 
+    file="/InstitutoBenedictoXVI/src/dominio/Venta.java" binary="false">    
+    <position height="129" width="127" x="2028" y="636"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="4" corner="BOTTOM_RIGHT" language="java" name="dominio.Moneda" project="InstitutoBenedictoXVI" 
+    file="/InstitutoBenedictoXVI/src/dominio/Moneda.java" binary="false">    
+    <position height="197" width="155" x="111" y="-77"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="5" corner="BOTTOM_RIGHT" language="java" name="dominio.Compra.Estado" project="InstitutoBenedictoXVI" 
+    file="/InstitutoBenedictoXVI/src/dominio/Compra.java" binary="false">    
+    <position height="129" width="127" x="2557" y="636"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="6" corner="BOTTOM_RIGHT" language="java" name="dominio.Usuario" project="InstitutoBenedictoXVI" 
+    file="/InstitutoBenedictoXVI/src/dominio/Usuario.java" binary="false">    
+    <position height="78" width="85" x="306" y="-77"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="7" corner="BOTTOM_RIGHT" language="java" name="dominio.Venta" project="InstitutoBenedictoXVI" 
+    file="/InstitutoBenedictoXVI/src/dominio/Venta.java" binary="false">    
+    <position height="673" width="489" x="2028" y="-77"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="8" corner="BOTTOM_RIGHT" language="java" name="dominio.Compra" project="InstitutoBenedictoXVI" 
+    file="/InstitutoBenedictoXVI/src/dominio/Compra.java" binary="false">    
+    <position height="673" width="498" x="2557" y="-77"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="9" corner="BOTTOM_RIGHT" language="java" name="dominio.Rol" project="InstitutoBenedictoXVI" 
+    file="/InstitutoBenedictoXVI/src/dominio/Rol.java" binary="false">    
+    <position height="78" width="85" x="431" y="-77"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="10" corner="BOTTOM_RIGHT" language="java" name="dominio.Clientealta" project="InstitutoBenedictoXVI" 
+    file="/InstitutoBenedictoXVI/src/dominio/Clientealta.java" binary="false">    
+    <position height="95" width="344" x="556" y="-77"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="11" corner="BOTTOM_RIGHT" language="java" name="dominio.Curso" project="InstitutoBenedictoXVI" 
+    file="/InstitutoBenedictoXVI/src/dominio/Curso.java" binary="false">    
+    <position height="78" width="85" x="940" y="-77"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="12" corner="BOTTOM_RIGHT" language="java" name="dominio.Empresa.Rubro" 
+    project="InstitutoBenedictoXVI" file="/InstitutoBenedictoXVI/src/dominio/Empresa.java" binary="false">    
+    <position height="163" width="117" x="1601" y="636"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="13" corner="BOTTOM_RIGHT" language="java" name="dominio.Academia" project="InstitutoBenedictoXVI" 
+    file="/InstitutoBenedictoXVI/src/dominio/Academia.java" binary="false">    
+    <position height="78" width="85" x="1065" y="-77"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="14" corner="BOTTOM_RIGHT" language="java" name="dominio.Prospecto" project="InstitutoBenedictoXVI" 
+    file="/InstitutoBenedictoXVI/src/dominio/Prospecto.java" binary="false">    
+    <position height="146" width="388" x="762" y="636"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="15" corner="BOTTOM_RIGHT" language="java" name="dominio.Cliente" project="InstitutoBenedictoXVI" 
+    file="/InstitutoBenedictoXVI/src/dominio/Cliente.java" binary="false">    
+    <position height="146" width="371" x="1190" y="636"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="16" corner="BOTTOM_RIGHT" language="java" name="dominio.Empresa.Estado" 
+    project="InstitutoBenedictoXVI" file="/InstitutoBenedictoXVI/src/dominio/Empresa.java" binary="false">    
+    <position height="129" width="127" x="1758" y="636"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </enumeration>  
+  <nesting id="17">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="5"/>  
+  </nesting>  
+  <association id="18">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="19" name="estado"/>      
+      <multiplicity id="20" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="21">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <association id="22">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="23" name="estado"/>      
+      <multiplicity id="24" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting id="25">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="3"/>  
+  </nesting>  
+  <nesting id="26">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="12"/>  
+  </nesting>  
+  <nesting id="27">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="16"/>  
+  </nesting>  
+  <association id="28">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="29" name="rubro"/>      
+      <multiplicity id="30" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="31">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="32" name="estado"/>      
+      <multiplicity id="33" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="34">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
