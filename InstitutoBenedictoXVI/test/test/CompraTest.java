@@ -36,6 +36,7 @@ public class CompraTest {
 		Assert.assertEquals(1, prueba.getNumero());
 		Assert.assertEquals(fechaEmision, prueba.getFechaEmision());
 		Assert.assertEquals("20100070970", prueba.getEmpresa());
+		Assert.assertEquals(80, prueba.getSubtotal());
 			
 	}
 
