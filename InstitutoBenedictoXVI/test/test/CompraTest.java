@@ -13,6 +13,7 @@ import dominio.Empresa;
 import dominio.Moneda;
 import dominio.ParametroIncompleto;
 import dominio.Transaccion;
+import dominio.Transaccion.Estado;
 import dominio.Transaccion.Tipo;
 
 
@@ -31,7 +32,7 @@ public class CompraTest {
 		LocalDate fechaEmision = new DateTime(2012, 07, 21, 0, 0, 0, 0).toLocalDate();
 		LocalDate fechaVencimiento = new DateTime(2012, 07, 21, 0, 0, 0, 0).toLocalDate();
 		LocalDate fechaPago = new DateTime(2012, 07, 21, 0, 0, 0, 0).toLocalDate();
-		Transaccion prueba = new Transaccion("Libreria", 1, fechaEmision, "20100070970", 80, 14.4, 94.4, monedaSoles.getDescripcion(), fechaVencimiento, fechaPago, "Orden Inicial",Tipo.COMPRA);
+		Transaccion prueba = new Transaccion("Libreria", 1, fechaEmision, "20100070970", 80, 14.4, 94.4, monedaSoles.getDescripcion(), fechaVencimiento, fechaPago, "Orden Inicial",Tipo.COMPRA,Estado.NUEVO);
 		Assert.assertEquals("Libreria", prueba.getConcepto());
 		Assert.assertEquals(1, prueba.getNumero());
 		Assert.assertEquals(fechaEmision, prueba.getFechaEmision());
