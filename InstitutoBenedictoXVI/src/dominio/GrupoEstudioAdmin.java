@@ -1,4 +1,4 @@
-package upc.edu.pe;
+package dominio;
 
 import java.util.ArrayList;
 

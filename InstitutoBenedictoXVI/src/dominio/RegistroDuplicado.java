@@ -1,4 +1,4 @@
-package upc.edu.pe;
+package dominio;
 
 public class RegistroDuplicado extends Exception {
 	private static final long serialVersionUID = 1L;
