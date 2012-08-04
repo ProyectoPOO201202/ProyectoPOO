@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import org.joda.time.LocalDate;
+import org.joda.time.DateTime;
 
 
 public class Transaccion {
@@ -14,20 +14,20 @@ public enum Tipo {COMPRA,VENTA}
 public enum Estado {NUEVO,ANULADA,CANCELADA}	
 public enum TFiltro{CONCEPTO,NUMERO,EMPRESA,FECHAEMISION,SUBTOTAL,IGV,TOTAL,MONEDA,FECHAVENCIMIENTO,FECHAPAGO,OBSERVACIONES,TIPO,ESTADO}
 
-public Transaccion(String concepto, int numero, LocalDate fechaEmision,
+public Transaccion(String concepto, int numero, DateTime fechaEmision2,
 			String empresa, double subtotal, double igv, double total,
-			String moneda, LocalDate fechaVencimiento, LocalDate fechaPago,
+			String moneda, DateTime fechaVencimiento2, DateTime fechaPago2,
 			String observaciones, Tipo tipo, Estado estado) throws ParametroIncompleto {
 	super();
 	if (concepto.equals(""))
 	{		
 		throw new ParametroIncompleto("concepto");	
 	}
-	else if(String.valueOf(fechaEmision).equals(""))
+	else if(String.valueOf(fechaEmision2).equals(""))
 	{
 		throw new ParametroIncompleto("fecha de emision");
 	}
-	else if(String.valueOf(fechaVencimiento).equals(""))
+	else if(String.valueOf(fechaVencimiento2).equals(""))
 	{
 		throw new ParametroIncompleto("empresa");
 	}	
@@ -51,13 +51,13 @@ public Transaccion(String concepto, int numero, LocalDate fechaEmision,
 		this.concepto = concepto;
 		this.numero = numero;
 		this.empresa = empresa;
-		this.fechaEmision = fechaEmision;
+		this.fechaEmision = fechaEmision2;
 		this.subtotal = subtotal;
 		this.igv = igv;
 		this.total = total;
 		this.moneda = moneda;
-		this.fechaVencimiento = fechaVencimiento;
-		this.fechaPago = fechaPago;
+		this.fechaVencimiento = fechaVencimiento2;
+		this.fechaPago = fechaPago2;
 		this.observaciones = observaciones;
 		this.tipo = tipo;
 		this.estado = estado;
@@ -67,13 +67,13 @@ public Transaccion(String concepto, int numero, LocalDate fechaEmision,
 	private String concepto;	
 	private int numero;
 	private String empresa;
-	private LocalDate fechaEmision;	
+	private DateTime fechaEmision;	
 	private double subtotal;
 	private double igv;
 	private double total;
 	private String moneda;
-	private LocalDate fechaVencimiento;
-	private LocalDate fechaPago;
+	private DateTime fechaVencimiento;
+	private DateTime fechaPago;
 	private String observaciones;
 	private Tipo tipo;	
 	private Estado estado;
@@ -113,10 +113,10 @@ public Transaccion(String concepto, int numero, LocalDate fechaEmision,
 	public void setNumero(int numero) {
 		this.numero = numero;
 	}
-	public LocalDate getFechaEmision() {
+	public DateTime getFechaEmision() {
 		return fechaEmision;
 	}
-	public void setFechaEmision(LocalDate fechaEmision) {
+	public void setFechaEmision(DateTime fechaEmision) {
 		this.fechaEmision = fechaEmision;
 	}
 	public String getEmpresa() {
@@ -149,16 +149,16 @@ public Transaccion(String concepto, int numero, LocalDate fechaEmision,
 	public void setMoneda(String moneda) {
 		this.moneda = moneda;
 	}
-	public LocalDate getFechaVencimiento() {
+	public DateTime getFechaVencimiento() {
 		return fechaVencimiento;
 	}
-	public void setFechaVencimiento(LocalDate fechaVencimiento) {
+	public void setFechaVencimiento(DateTime fechaVencimiento) {
 		this.fechaVencimiento = fechaVencimiento;
 	}
-	public LocalDate getFechaPago() {
+	public DateTime getFechaPago() {
 		return fechaPago;
 	}
-	public void setFechaPago(LocalDate fechaPago) {
+	public void setFechaPago(DateTime fechaPago) {
 		this.fechaPago = fechaPago;
 	}
 	public String getObservaciones() {

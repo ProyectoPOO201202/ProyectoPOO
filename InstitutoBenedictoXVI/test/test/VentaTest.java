@@ -28,9 +28,9 @@ public class VentaTest {
 	public void testMetodoGeneral() throws ParametroIncompleto {	
 	
 		Moneda monedaSoles = new Moneda("S", "Soles");
-		LocalDate fechaEmision = new DateTime(2012, 07, 21, 0, 0, 0, 0).toLocalDate();
-		LocalDate fechaVencimiento = new DateTime(2012, 8, 21, 0, 0, 0, 0).toLocalDate();
-		LocalDate fechaPago = new DateTime(2012, 07, 30, 0, 0, 0, 0).toLocalDate();
+		DateTime fechaEmision = new DateTime(2012, 07, 21, 0, 0, 0, 0);
+		DateTime fechaVencimiento = new DateTime(2012, 8, 21, 0, 0, 0, 0);
+		DateTime fechaPago = new DateTime(2012, 07, 30, 0, 0, 0); 
 		Transaccion prueba = new Transaccion("Grupo de Estudio Alpha", 1, fechaEmision, "89674532121", 180, 28.8, 188.8, monedaSoles.getDescripcion(), fechaVencimiento, fechaPago, "Pedido Inicial", Tipo.VENTA, Estado.NUEVO);		
 		Assert.assertEquals(1, prueba.getNumero());
 		Assert.assertEquals("20176409076", prueba.getEmpresa());			
@@ -40,9 +40,9 @@ public class VentaTest {
 	public void testMetodoFiltro() throws ParametroIncompleto {	
 		boolean bool_resultado;
 		Moneda monedaSoles = new Moneda("S", "Soles");
-		LocalDate fechaEmision = new DateTime(2012, 07, 21, 0, 0, 0, 0).toLocalDate();
-		LocalDate fechaVencimiento = new DateTime(2012, 8, 21, 0, 0, 0, 0).toLocalDate();
-		LocalDate fechaPago = new DateTime(2012, 07, 30, 0, 0, 0, 0).toLocalDate();
+		DateTime fechaEmision = new DateTime(2012, 07, 21, 0, 0, 0, 0);
+		DateTime fechaVencimiento = new DateTime(2012, 8, 21, 0, 0, 0, 0);
+		DateTime fechaPago = new DateTime(2012, 07, 30, 0, 0, 0, 0);
 		Transaccion prueba = new Transaccion("Grupo de Estudio Alpha", 1, fechaEmision, "89674532121", 180, 28.8, 188.8, monedaSoles.getDescripcion(), fechaVencimiento, fechaPago, "Pedido Inicial", Tipo.VENTA, Estado.NUEVO);
 		
 		bool_resultado=prueba.addFiltro(TFiltro.CONCEPTO, "Prueba");
@@ -50,13 +50,16 @@ public class VentaTest {
 	}
 	
 	@Test
-	public void testMetodoFiltroContador() throws ParametroIncompleto {	
+	public void testMetodoFiltroContador() throws ParametroIncompleto {
+		
+		
+		
 		boolean bool_resultado;
 		int contador;
 		Moneda monedaSoles = new Moneda("S", "Soles");
-		LocalDate fechaEmision = new DateTime(2012, 07, 21, 0, 0, 0, 0).toLocalDate();
-		LocalDate fechaVencimiento = new DateTime(2012, 8, 21, 0, 0, 0, 0).toLocalDate();
-		LocalDate fechaPago = new DateTime(2012, 07, 30, 0, 0, 0, 0).toLocalDate();
+		DateTime fechaEmision = new DateTime(1989, 04, 1, 0, 0, 0, 0);
+		DateTime fechaVencimiento = new DateTime(2012, 8, 21, 0, 0, 0, 0);
+		DateTime fechaPago = new DateTime(2012, 07, 30, 0, 0, 0, 0);
 		Transaccion prueba = new Transaccion("Grupo de Estudio Alpha", 1, fechaEmision, "89674532121", 180, 28.8, 188.8, monedaSoles.getDescripcion(), fechaVencimiento, fechaPago, "Pedido Inicial", Tipo.VENTA, Estado.NUEVO);
 		
 		bool_resultado=prueba.addFiltro(TFiltro.CONCEPTO, "Prueba");
