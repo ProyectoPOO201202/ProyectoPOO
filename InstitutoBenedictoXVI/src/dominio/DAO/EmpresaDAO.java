@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import dominio.Empresa;
-import dominio.Empresa.Estado;
-import dominio.Empresa.Rubro;
 
 public class EmpresaDAO {
     private DataBase bdMock;
@@ -18,9 +16,9 @@ public class EmpresaDAO {
         bdMock.tablaEmpresa().add(empresa);
     }
     
-    public void modificarEmpresa(String codigo, String razon_social, Rubro rubro,
+    public void modificarEmpresa(String codigo, String razon_social, String rubro,
 			String direccion, String correo, String telefono, String ciudad,
-			String pais, Estado estado, String observaciones){
+			String pais, String estado, String observaciones){
     	
     	Empresa empresa = obtenerEmpresaPorCodigo(codigo);
 		empresa.setRazon_social(razon_social);
@@ -38,9 +36,11 @@ public class EmpresaDAO {
 	public ArrayList<Empresa> devolverListaBusquedaEmpresasPorRazonSocial(String razonSocial){
         
 		ArrayList<Empresa> resultadoBusquedaEmpresas = new ArrayList<Empresa>();
-		for(int i = 0; i < devolverCantidadEmpresas(); i++){            
+		for(int i = 0; i < cantidadEmpresas(); i++)
+		{            
 			Empresa e = devolverEmpresas().get(i);          
-            if(e.getRazon_social().indexOf(razonSocial) > -1){
+            if(e.getRazon_social().indexOf(razonSocial) > -1)
+            {
             	resultadoBusquedaEmpresas.add(e);
             }
         }		
@@ -48,9 +48,11 @@ public class EmpresaDAO {
     }
     
 	public void eliminarEmpresa(String codigo){
-        for(int i = 0; i < devolverCantidadEmpresas(); i++){            
+        for(int i = 0; i < cantidadEmpresas(); i++)
+        {            
         	Empresa e = devolverEmpresas().get(i);          
-            if(e.getCodigo().equals(codigo)){
+            if(e.getCodigo().equals(codigo))
+            {
                 devolverEmpresas().remove(i);
             }
         }
@@ -58,9 +60,11 @@ public class EmpresaDAO {
     
 	public Empresa obtenerEmpresaPorCodigo(String codigo){
 		Empresa empresa = null;
-		for(int i = 0; i < devolverCantidadEmpresas(); i++){    
+		for(int i = 0; i < cantidadEmpresas(); i++)
+		{    
 			Empresa e = devolverEmpresas().get(i);            
-            if(e.getCodigo().equals(codigo)){
+            if(e.getCodigo().equals(codigo))
+            {
             	empresa = e;
                 break;
             }
@@ -68,7 +72,7 @@ public class EmpresaDAO {
 		return empresa;
 	}
 	
-	public int devolverCantidadEmpresas(){
+	public int cantidadEmpresas(){
         return devolverEmpresas().size();
     }
 
