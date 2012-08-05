@@ -50,9 +50,7 @@ public class VentaTest {
 	}
 	
 	@Test
-	public void testMetodoFiltroContador() throws ParametroIncompleto {
-		
-		
+	public void testMetodoFiltroContador() throws ParametroIncompleto {		
 		
 		boolean bool_resultado;
 		int contador;
@@ -65,6 +63,6 @@ public class VentaTest {
 		bool_resultado=prueba.addFiltro(TFiltro.CONCEPTO, "Prueba");
 		contador=prueba.listaFiltro();
 		//Assert.assertTrue(bool_resultado);	
-		Assert.assertEquals(1, contador);
+		Assert.assertEquals(2, contador);
 	}
 }
