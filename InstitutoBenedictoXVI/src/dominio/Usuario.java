@@ -5,6 +5,7 @@ import java.util.Locale;
 import org.joda.time.LocalDate;
 
 
+@SuppressWarnings("unused")
 public class Usuario {
 	
 	private String correo;
@@ -14,83 +15,69 @@ public class Usuario {
 	private TipoCuenta tipoCuenta;
 	private Instituto instituto;
 
-	public void setCorreo(String string) {
+	public String getCorreo() {
+		// TODO Auto-generated method stub
+		return correo;
+	}
+	public String setCorreo(String correo) {
+		return this.correo = correo;
+		
+	}
+
+	public String getClave() {
+		// TODO Auto-generated method stub
+		return clave;
+	}
+
+	public void setClave(String clave) {
+		// TODO Auto-generated method stub
+		this.clave = clave;
+		
+	}
+
+	public boolean isflagTerminosLeg() {
+		return flagTerminosLeg;
+	}
+	
+	public void setFlagTerminosLeg(boolean flagTerminosLeg) {
+		this.flagTerminosLeg = flagTerminosLeg;
 		// TODO Auto-generated method stub
 		
 	}
 
-	public void setClave(String string) {
-		// TODO Auto-generated method stub
+	public LocalDate getFechaRegistro(){
+		return fechaRegistro;
 		
 	}
 
-	public void setFlagTerminosLeg(boolean b) {
-		// TODO Auto-generated method stub
-		
+	public void setFechaRegistro(LocalDate fechaRegistro){
+		this.fechaRegistro = fechaRegistro;
 	}
 
-	public void setInstituto(Instituto instituto) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
-	public Object getCorreo() {
+	public TipoCuenta getTipoCuenta() {
 		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public Object getClave() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public void setFlagTerminosLeg1(boolean flagTerminosLeg) {
-	}
-
-	public Object getTipoCuenta() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public Object getFechaRegistro() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public Instituto getInstituto() {
-		// TODO Auto-generated method stub
-		return null;
+		return tipoCuenta;
 	}
 
 	public void setTipoCuenta(TipoCuenta tipocuenta) {
 		// TODO Auto-generated method stub
+		this.tipoCuenta = tipocuenta;
 		
 	}
 
-	public Object isFlagterminoLeg() {
+	
+	public Instituto getInstituto() {
 		// TODO Auto-generated method stub
-		return null;
+		return instituto;
+	}
+	
+	public void setInstituto(Instituto instituto){
+		this.instituto = instituto;
 	}
 
-	public void setFechaRegistro(Locale fechaRegistro) {
-	}
+	
 
-	public void setFechaRegistro(LocalDate fechaActual) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public boolean isFlagTerminosLegales() {
-		return flagTerminosLeg;
-	}
-
-	public void setFlagTerminosLeg11(boolean flagTerminosLeg) {
-		this.flagTerminosLeg = flagTerminosLeg;
-	}
-
-	public Object isFlagTerminosLeg() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }

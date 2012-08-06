@@ -5,8 +5,8 @@ import java.util.regex.Pattern;
 
 public class Funcion {
 
-    private Pattern pattern;
-    private Matcher matcher;
+    private static Pattern pattern;
+    private static Matcher matcher;
     private static final String EMAIL_PATTERN = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
     private static final String CARACTERES_EXTRANOS = "[_a-zA-Z0-9]+"; 
   
@@ -20,8 +20,12 @@ public class Funcion {
 	}
 
 
-	public static String getCaracteresExtranos() {
-		return CARACTERES_EXTRANOS;
+	public boolean getCaracteresExtranos(String nombre) {
+		//return CARACTERES_EXTRANOS;
+		
+		pattern = Pattern.compile(CARACTERES_EXTRANOS);
+		matcher = pattern.matcher(nombre);
+		return matcher.matches();
 	}
 	
 
