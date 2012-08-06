@@ -4,6 +4,11 @@
 	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="C:/Users/user/Documents/workspace-sts-2.9.2.RELEASE/ProyectoPOO/InstitutoBenedictoXVI/lib/joda-time-2.1.jar"/>
+=======
+	<classpathentry kind="lib" path="C:/ProyPOO/ProyectoPOO/InstitutoBenedictoXVI/lib/javacsv.jar"/>
+	<classpathentry kind="lib" path="C:/ProyPOO/ProyectoPOO/InstitutoBenedictoXVI/lib/joda-time-2.1.jar"/>
+>>>>>>> 52b292da0958d18c6d6d2de1aa8da54df2353d4d
 	<classpathentry kind="output" path="bin"/>
 </classpath>

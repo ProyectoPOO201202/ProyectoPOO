@@ -2,23 +2,20 @@ package dominio;
 
 public class Empresa {	
 	
-public enum Estado {ACTIVA, INACTIVA, SUSPENDIDA}	
-public enum Rubro {UTILES, SERVICIOS, COMPUTO, LIMPIEZA, CLIENTE}	
-	
 	private String codigo;	
 	private String razon_social;
-	private Rubro rubro;
+	private String rubro;
 	private String direccion;
 	private String correo;
 	private String telefono;	
 	private String ciudad;
 	private String pais;
-	private Estado estado;
+	private String estado;
 	private String observaciones;
 	
-		public Empresa(String codigo, String razon_social, Rubro rubro,
+		public Empresa(String codigo, String razon_social, String rubro,
 			String direccion, String correo, String telefono, String ciudad,
-			String pais, Estado estado, String observaciones) {
+			String pais, String estado, String observaciones) {
 		super();
 		this.codigo = codigo;
 		this.razon_social = razon_social;
@@ -44,10 +41,10 @@ public enum Rubro {UTILES, SERVICIOS, COMPUTO, LIMPIEZA, CLIENTE}
 	public void setRazon_social(String razon_social) {
 		this.razon_social = razon_social;
 	}
-	public Rubro getRubro() {
+	public String getRubro() {
 		return rubro;
 	}
-	public void setRubro(Rubro rubro) {
+	public void setRubro(String rubro) {
 		this.rubro = rubro;
 	}
 	public String getDireccion() {
@@ -80,10 +77,10 @@ public enum Rubro {UTILES, SERVICIOS, COMPUTO, LIMPIEZA, CLIENTE}
 	public void setPais(String pais) {
 		this.pais = pais;
 	}
-	public Estado getEstado() {
+	public String getEstado() {
 		return estado;
 	}
-	public void setEstado(Estado estado) {
+	public void setEstado(String estado) {
 		this.estado = estado;
 	}
 	public String getObservaciones() {
