@@ -3,59 +3,138 @@ package test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import java.net.BindException;
+//import java.net.BindException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
-import controlador.Controlador;
+import controlador.BusinessException;
 import controlador.UsuarioControlador;
 import dominio.Usuario;
 
 
 public class UsuarioControladorTest {
+	
+	@Rule
+	public ExpectedException thrown = ExpectedException.none();
 
 	@Test
-	public void testValidar() throws BindException {
+	public void testValidarUsuario() {
 		//fail("Not yet implemented");
 		boolean result =true;
 		
 		try {
-		Controlador controlador = new Controlador();
+		UsuarioControlador controlador = new UsuarioControlador();
 		
-		String valorcontrasena = "user";
+		String confirmarcontrasena = "user";
 		String correo = "user@upc.edu.pe";
-		String contrasena = "user";
-		String ConfirmacionClave = "user";
-		boolean estado = true;
-		result = controlador.validarUsuario(contrasena, correo, valorcontrasena, ConfirmacionClave, estado);
-		} catch (BindException be) {
+		String clave = "user";
+		boolean flag = true;
+		result = controlador.validarUsuario(correo, clave, confirmarcontrasena, flag);
+		} catch (BusinessException be) {
 			Logger.getLogger(UsuarioControladorTest.class.getName()).log(Level.SEVERE, null, be);
 		}
 		assertTrue("bienvenido al sistema", result);
 		
 	}
+	
+	@Test
+	public void testBuscarUsuario() {
+		boolean result = true;
+		try {
+			UsuarioControlador controlador = new UsuarioControlador();
+			controlador.buscarUsuario("user@upc.edu.pe");
+			} catch (BusinessException be){
+				Logger.getLogger(UsuarioControladorTest.class.getName()).log(Level.SEVERE, null, be);
+				
+			}
+		assertTrue("No existe Usuario", result);
+		
+	}
 
 
 @Test
-public void testCrearUsuario() throws BindException {
+public void testCrearUsuario() {
     boolean resultadoValidar = true;
     boolean resultadoCrear = true;
     Usuario usuario = null;
     UsuarioControlador controlador = null;
-    controlador = new UsuarioControlador();
-	String confirmarContrasena = "desarrollo";
-	String correo = "user2@user.com";
-	String clave = "desarrollo";
-	boolean flag = true;
-	resultadoValidar = controlador.validarDatosUsuario(correo, clave, confirmarContrasena, flag);
-	resultadoCrear = controlador.crear(correo, clave, confirmarContrasena, flag);
+    try {
+	    controlador = new UsuarioControlador();
+		String confirmarcontrasena = "user";
+		String correo = "user@user.com";
+		String clave = "user";
+		boolean flag = true;
+	resultadoValidar = controlador.validarUsuario(correo,clave,  confirmarcontrasena, flag);
+	resultadoCrear = controlador.crear(correo, clave, confirmarcontrasena, flag);
 	usuario = controlador.buscarUsuario(correo);
+	
+    } catch (BusinessException be){
+    	Logger.getLogger(UsuarioControladorTest.class.getName()).log(Level.SEVERE, null, be);
+    }
     assertTrue("Usuario validado", resultadoValidar);
     assertTrue("Se creo nuevo usuario", resultadoCrear);
     assertEquals("user2@user.com", usuario.getCorreo());
-    assertEquals("desarrollo", usuario.getClave());
-    assertEquals(true, usuario.isFlagTerminosLeg());
+    assertEquals("user", usuario.getClave());
+    assertEquals(true, usuario.isflagTerminosLeg());
 	}
+
+@Test
+public void testCorreoVacio() throws BusinessException{
+	thrown.expect(BusinessException.class);
+	thrown.expectMessage("Ingrese su correo");
+	
+	UsuarioControlador controlador = new UsuarioControlador();
+	String correo = "";
+	String clave = "user2";
+	String confirmarcontrasena = "user2";
+	boolean flag = true;
+	
+	controlador.validarUsuario(correo, clave, confirmarcontrasena, flag);
+}
+
+@Test
+public void testClaveVacio() throws BusinessException{
+	thrown.expect(BusinessException.class);
+	thrown.expectMessage("Ingrese su contraseña");
+	
+	UsuarioControlador controlador = new UsuarioControlador();
+	String correo = "user@upc.edu.pe";
+	String clave = "";
+	String confirmarcontrasena = "user2";
+	boolean flag = true;
+	
+	controlador.validarUsuario(correo, clave, confirmarcontrasena, flag);
+}
+
+@Test
+public void testConfirmacionClave() throws BusinessException{
+	thrown.expect(BusinessException.class);
+	thrown.expectMessage("Ingrese su contraseña");
+	
+	UsuarioControlador controlador = new UsuarioControlador();
+	String correo = "user@upc.edu.pe";
+	String clave = "user2";
+	String confirmarcontrasena = "";
+	boolean flag = true;
+	
+	controlador.validarUsuario(correo, clave, confirmarcontrasena, flag);
+}
+
+@Test
+public void testValidacionClave() throws BusinessException{
+	thrown.expect(BusinessException.class);
+	thrown.expectMessage("Ingrese su contraseña");
+	
+	UsuarioControlador controlador = new UsuarioControlador();
+	String correo = "user@upc.edu.pe";
+	String clave = "user";
+	String confirmarcontrasena = "user2";
+	boolean flag = true;
+	
+	controlador.validarUsuario(correo, clave, confirmarcontrasena, flag);
+}
 }

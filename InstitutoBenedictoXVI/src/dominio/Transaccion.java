@@ -1,9 +1,11 @@
 package dominio;
 
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.logging.Filter;
 
 import org.joda.time.DateTime;
 
@@ -78,11 +80,11 @@ public Transaccion(String concepto, int numero, DateTime fechaEmision2,
 	private Tipo tipo;	
 	private Estado estado;
 	
-	private List<Filtro> filtro = new ArrayList<Filtro>();
+	private List<Filtro> filtro = new ArrayList<Filter>();
 	
-	public boolean addFiltro(TFiltro tipoFiltro,String valor)
+	public boolean addFiltro(TFiltro tipoFiltro, String valor)
 	{
-		Filtro cargador = new Filtro(tipoFiltro.toString(),valor);
+		Filtro cargador = new File(tipoFiltro.toString(),valor);
 		filtro.add(cargador);
 		return true;		
 	}
