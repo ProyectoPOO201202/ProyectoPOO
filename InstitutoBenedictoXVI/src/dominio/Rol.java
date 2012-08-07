@@ -10,13 +10,19 @@ public class Rol {
 	private String actualizado_el;
 	
 	
-	public Rol(String codigo, String descripcion, String creado_por,
-			String creado_el, String actualizado_por, String actualizado_el) {
-		super();
+	public void crearRol(String codigo, String descripcion, String creado_por,
+			String creado_el) {		
 		this.codigo = codigo;
 		this.descripcion = descripcion;
 		this.creado_por = creado_por;
 		this.creado_el = creado_el;
+	}
+	
+	public void modificarRol(String codigo, String descripcion, String actualizado_por,
+			String actualizado_el) {
+		
+		this.codigo = codigo;
+		this.descripcion = descripcion;
 		this.actualizado_por = actualizado_por;
 		this.actualizado_el = actualizado_el;
 	}
@@ -59,12 +65,6 @@ public class Rol {
 
 	public void setActualizado_el(String actualizado_el) {
 		this.actualizado_el = actualizado_el;
-	}
-
-	public Rol(String codigo, String nombre) {
-		super();
-		this.codigo = codigo;
-		this.descripcion = nombre;
 	}
 
 	public String getCodigo() {
