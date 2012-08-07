@@ -2,10 +2,12 @@ package controlador;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.List;
 
 import com.csvreader.CsvReader;
 
 import dominio.Empresa;
+import dominio.DAO.DataBase;
 import dominio.DAO.EmpresaDAO;
 
 public class EmpresaControlador {	
@@ -52,5 +54,22 @@ public void importarEmpresas(String nombreArchivo){
 			e.printStackTrace();
 		}
 	}
+
+	public List<Empresa> devolverListaEmpresas()
+	{
+	    return empresaDAO.devolverEmpresa();
+	}
+	
+	public int cantidadEmpresas(){
+        return empresaDAO.cantidadEmpresas();
+    }
+	
+	public void setDataBase(DataBase bdMock) {
+        this.empresaDAO.setBaseDatosMock(bdMock);
+    }
+	
+	public void limpiaListaEmpresa() {
+		this.empresaDAO.limpiaListaEmpresa();
+    }
 
 }

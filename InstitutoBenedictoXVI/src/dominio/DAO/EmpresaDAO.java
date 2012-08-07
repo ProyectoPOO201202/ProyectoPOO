@@ -38,7 +38,7 @@ public class EmpresaDAO {
 		ArrayList<Empresa> resultadoBusquedaEmpresas = new ArrayList<Empresa>();
 		for(int i = 0; i < cantidadEmpresas(); i++)
 		{            
-			Empresa e = devolverEmpresas().get(i);          
+			Empresa e = devolverEmpresa().get(i);          
             if(e.getRazon_social().indexOf(razonSocial) > -1)
             {
             	resultadoBusquedaEmpresas.add(e);
@@ -50,10 +50,10 @@ public class EmpresaDAO {
 	public void eliminarEmpresa(String codigo){
         for(int i = 0; i < cantidadEmpresas(); i++)
         {            
-        	Empresa e = devolverEmpresas().get(i);          
+        	Empresa e = devolverEmpresa().get(i);          
             if(e.getCodigo().equals(codigo))
             {
-                devolverEmpresas().remove(i);
+                devolverEmpresa().remove(i);
             }
         }
 	}
@@ -62,7 +62,7 @@ public class EmpresaDAO {
 		Empresa empresa = null;
 		for(int i = 0; i < cantidadEmpresas(); i++)
 		{    
-			Empresa e = devolverEmpresas().get(i);            
+			Empresa e = devolverEmpresa().get(i);            
             if(e.getCodigo().equals(codigo))
             {
             	empresa = e;
@@ -73,10 +73,10 @@ public class EmpresaDAO {
 	}
 	
 	public int cantidadEmpresas(){
-        return devolverEmpresas().size();
+        return devolverEmpresa().size();
     }
 
-    public List<Empresa> devolverEmpresas() {
+    public List<Empresa> devolverEmpresa() {
         return bdMock.tablaEmpresa();
     }
     
