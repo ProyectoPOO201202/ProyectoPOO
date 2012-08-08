@@ -26,9 +26,9 @@ public class ClienteTest2 {
 		
 		boolean datoscorrectos = alta.ValidaDatos(nombre,ape_paterno,ape_materno,email,dni,telefono,celular); 
 		
-		System.out.print("No a ingresado datos relevantes");
 		
-		//Assert.assertFalse("No a ingresado datos relevantes",datoscorrectos);
+		
+		Assert.assertTrue("No a ingresado datos relevantes",datoscorrectos);
 		
 	}
 
