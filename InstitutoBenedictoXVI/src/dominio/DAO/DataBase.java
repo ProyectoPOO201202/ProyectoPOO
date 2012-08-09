@@ -9,4 +9,5 @@ public interface DataBase {
 	public List<Empresa> tablaEmpresa();
 	public List<Modulo> tablaModulo();
 	public List<Rol> tablaRol();
+	public List<Usuario> tablaUsuario();
 }

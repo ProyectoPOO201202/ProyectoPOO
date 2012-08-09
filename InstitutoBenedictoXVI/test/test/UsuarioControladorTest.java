@@ -28,7 +28,11 @@ public class UsuarioControladorTest {
 		
 		try {
 		UsuarioControlador controlador = new UsuarioControlador();
-		
+		//String dni = "45646253";
+		//String nombre = "Carlos";
+		//String apellidoPaterno = "Paredes";
+		//String apellidoMaterno = "Diaz";
+		//String cargo = "administrador";
 		String confirmarcontrasena = "user";
 		String correo = "user@upc.edu.pe";
 		String clave = "user";
@@ -65,11 +69,16 @@ public void testCrearUsuario() {
     try {
 	    controlador = new UsuarioControlador();
 		String confirmarcontrasena = "user";
+		String dni = "45646253";
+		String nombre = "Carlos";
+		String apellidoPaterno = "Paredes";
+		String apellidoMaterno = "Diaz";
+		String cargo = "administrador";
 		String correo = "user@user.com";
 		String clave = "user";
 		boolean flag = true;
-	resultadoValidar = controlador.validarUsuario(correo,clave,  confirmarcontrasena, flag);
-	resultadoCrear = controlador.crear(correo, clave, confirmarcontrasena, flag);
+	resultadoValidar = controlador.validarUsuario(correo, clave, confirmarcontrasena, flag);
+	resultadoCrear = controlador.crear(dni, nombre, apellidoPaterno, apellidoMaterno, cargo, correo, clave, confirmarcontrasena, flag);
 	usuario = controlador.buscarUsuario(correo);
 	
     } catch (BusinessException be){
@@ -77,6 +86,11 @@ public void testCrearUsuario() {
     }
     assertTrue("Usuario validado", resultadoValidar);
     assertTrue("Se creo nuevo usuario", resultadoCrear);
+    assertEquals("45646253", usuario.getDni());
+    assertEquals("carlos", usuario.getNombre());
+    assertEquals("Paredes",usuario.getApellidoPaterno());
+    assertEquals("Diaz",usuario.getApellidoMaterno());
+    assertEquals("adminsitrador", usuario.getCargo());
     assertEquals("user2@user.com", usuario.getCorreo());
     assertEquals("user", usuario.getClave());
     assertEquals(true, usuario.isflagTerminosLeg());
@@ -88,9 +102,10 @@ public void testCorreoVacio() throws BusinessException{
 	thrown.expectMessage("Ingrese su correo");
 	
 	UsuarioControlador controlador = new UsuarioControlador();
-	String correo = "";
-	String clave = "user2";
-	String confirmarcontrasena = "user2";
+	String confirmarcontrasena = "user";
+
+	String correo = "user@user.com";
+	String clave = "user";
 	boolean flag = true;
 	
 	controlador.validarUsuario(correo, clave, confirmarcontrasena, flag);

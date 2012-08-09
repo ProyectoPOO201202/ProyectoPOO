@@ -7,6 +7,8 @@ import java.util.List;
 import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 
+import controlador.BusinessException;
+
 import dominio.Usuario;
 
 public class UsuarioControlador {
@@ -20,10 +22,10 @@ public class UsuarioControlador {
         listaUsuario = new ArrayList<Usuario>();
     }
     
-    public Usuario buscarUsuario(String codigo) throws BusinessException {
+    public Usuario buscarUsuario(String dni) throws BusinessException {
 		// TODO Auto-generated method stub
 		for (Usuario usuario : listaUsuario){
-			if (usuario.getCorreo().equals(codigo)){
+			if (usuario.getCorreo().equals(dni)){
 				return usuario;
 			}
 			
@@ -31,12 +33,18 @@ public class UsuarioControlador {
 		return null;
 	}
     
-	public boolean crear(String correo, String clave,
+	public boolean crear(String dni, String nombre, String apellidoPaterno, String ApellidoMaterno, String cargo, String correo, String clave,
 			String confirmarcontrasena, boolean flag) throws BusinessException {
 		if (buscarUsuario(correo) == null){
 			LocalDate fechaActual = new DateTime().toLocalDate();
 			
+			
 			Usuario usuario = new Usuario();
+			usuario.setDni(dni);
+			usuario.setNombre(nombre);
+			usuario.setApellidoPaterno(apellidoPaterno);
+			usuario.setApellidoMaterno(ApellidoMaterno);
+			usuario.setCargo(cargo);
 			usuario.setCorreo(correo);
 			usuario.setClave(clave);
 			usuario.setFlagTerminosLeg(flag);
@@ -50,7 +58,7 @@ public class UsuarioControlador {
 	}
 
 	public boolean validarUsuario(String correo, String clave,
-			String confirmarcontrasena, boolean flag) throws BusinessException{
+			String confirmarcontrasena,boolean flag) throws BusinessException{
 		mensajeError = "";
 		boolean validarCorreo = true;
 		

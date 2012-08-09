@@ -1,5 +1,7 @@
 package dominio;
 
+import java.math.BigDecimal;
+
 public class Rol {
 	
 	private String codigo;
@@ -10,6 +12,12 @@ public class Rol {
 	private String actualizado_el;
 	
 	
+	public Rol(int i, String string, int j, int k, int l, int m, BigDecimal bigDecimal) {
+		// TODO Auto-generated constructor stub
+	}
+
+	
+
 	public void crearRol(String codigo, String descripcion, String creado_por,
 			String creado_el) {		
 		this.codigo = codigo;

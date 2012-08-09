@@ -13,6 +13,10 @@ public class Academia {
 		this.direccion = direccion;
 	}	
 	
+	public Academia() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getCodigo() {
 		return codigo;
 	}
@@ -30,6 +34,11 @@ public class Academia {
 	}
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
+	}
+
+	public void setNombre(String string) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	
