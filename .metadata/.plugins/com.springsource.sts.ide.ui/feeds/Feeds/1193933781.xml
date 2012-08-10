@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2full.xsl"?><?xml-stylesheet type="text/css" media="screen" href="http://feeds.feedburner.com/~d/styles/itemcontent.css"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" version="2.0">
+
+<channel>
+	<title>SpringSource Team Blog</title>
+	
+	<link>http://blog.springsource.org</link>
+	<description>The voice of SpringSource</description>
+	<lastBuildDate>Fri, 03 Aug 2012 16:40:47 +0000</lastBuildDate>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.1.1</generator>
+		<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/SpringSourceTeamBlog" /><feedburner:info uri="springsourceteamblog" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><item>
+		<title>The Most Amazing Java Type Declaration Ever</title>
+		<link>http://feedproxy.google.com/~r/SpringSourceTeamBlog/~3/5KNqkAQOYAY/</link>
+		<comments>http://blog.springsource.org/2012/08/03/the-most-amazing-java-type-declaration-ever/#comments</comments>
+		<pubDate>Fri, 03 Aug 2012 16:40:47 +0000</pubDate>
+		<dc:creator>David Turanski</dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[Spring]]></category>
+		<category><![CDATA[Spring Data]]></category>
+
+		<guid isPermaLink="false">http://blog.springsource.org/?p=11269</guid>
+		<description>I&amp;#039;d like to think I&amp;#039;m pretty comfortable with Java and generics but I recently came across this bit of Java code and it stopped me in my tracks : public abstract class AnnotationBasedPersistentProperty&amp;#60;P extends PersistentProperty&amp;#60;P&amp;#62;&amp;#62; extends AbstractPersistentProperty&amp;#60;P&amp;#62; {..} This class is internal to the Spring Data framework&amp;#039;s Repository Support which removes the need to write  &lt;a href="http://blog.springsource.org/2012/08/03/the-most-amazing-java-type-declaration-ever/"&gt;&lt;em&gt;Read more...&lt;/em&gt;&lt;/a&gt;&lt;img src="http://feeds.feedburner.com/~r/SpringSourceTeamBlog/~4/5KNqkAQOYAY" height="1" width="1"/&gt;</description>
+		<wfw:commentRss>http://blog.springsource.org/2012/08/03/the-most-amazing-java-type-declaration-ever/feed/</wfw:commentRss>
+		<slash:comments>6</slash:comments>
+		<feedburner:origLink>http://blog.springsource.org/2012/08/03/the-most-amazing-java-type-declaration-ever/</feedburner:origLink></item>
+		<item>
+		<title>Oh the Places You'll Go!</title>
+		<link>http://feedproxy.google.com/~r/SpringSourceTeamBlog/~3/j3qkpViP3q8/</link>
+		<comments>http://blog.springsource.org/2012/07/03/oh-the-places-youll-go/#comments</comments>
+		<pubDate>Tue, 03 Jul 2012 16:00:23 +0000</pubDate>
+		<dc:creator>Rod Johnson</dc:creator>
+				<category><![CDATA[Business]]></category>
+		<category><![CDATA[Cloud Computing]]></category>
+		<category><![CDATA[Data Access]]></category>
+		<category><![CDATA[Enterprise Integration]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Spring]]></category>
+		<category><![CDATA[SpringSource]]></category>
+
+		<guid isPermaLink="false">http://blog.springsource.org/?p=11259</guid>
+		<description>The last ten years has been an exciting and challenging journey for me and I’m very proud of the technology and community that my SpringSource cofounders and I fostered. However, there always comes a time to make a choice about the places you’ll go, and it’s time for me to leave VMware and pursue other  &lt;a href="http://blog.springsource.org/2012/07/03/oh-the-places-youll-go/"&gt;&lt;em&gt;Read more...&lt;/em&gt;&lt;/a&gt;&lt;img src="http://feeds.feedburner.com/~r/SpringSourceTeamBlog/~4/j3qkpViP3q8" height="1" width="1"/&gt;</description>
+		<wfw:commentRss>http://blog.springsource.org/2012/07/03/oh-the-places-youll-go/feed/</wfw:commentRss>
+		<slash:comments>97</slash:comments>
+		<feedburner:origLink>http://blog.springsource.org/2012/07/03/oh-the-places-youll-go/</feedburner:origLink></item>
+		<item>
+		<title>Groovy 2.0 released</title>
+		<link>http://feedproxy.google.com/~r/SpringSourceTeamBlog/~3/Jtd0qpsUE20/</link>
+		<comments>http://blog.springsource.org/2012/07/02/groovy-2-0-released/#comments</comments>
+		<pubDate>Mon, 02 Jul 2012 15:50:32 +0000</pubDate>
+		<dc:creator>Guillaume Laforge</dc:creator>
+				<category><![CDATA[Groovy/Grails]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Open Source]]></category>
+
+		<guid isPermaLink="false">http://blog.springsource.org/?p=11253</guid>
+		<description>The Groovy development team and SpringSource are happy to echo the announcement of the release of Groovy 2.0, the highly popular dynamic language for the Java platform. The key highlights of this important milestone are: a static type checker to let the compiler tell you about the correctness of your code, static compilation for the performance  &lt;a href="http://blog.springsource.org/2012/07/02/groovy-2-0-released/"&gt;&lt;em&gt;Read more...&lt;/em&gt;&lt;/a&gt;&lt;img src="http://feeds.feedburner.com/~r/SpringSourceTeamBlog/~4/Jtd0qpsUE20" height="1" width="1"/&gt;</description>
+		<wfw:commentRss>http://blog.springsource.org/2012/07/02/groovy-2-0-released/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://blog.springsource.org/2012/07/02/groovy-2-0-released/</feedburner:origLink></item>
+		<item>
+		<title>Spring project infrastructure updates</title>
+		<link>http://feedproxy.google.com/~r/SpringSourceTeamBlog/~3/OiPA8Pmv3Lg/</link>
+		<comments>http://blog.springsource.org/2012/06/27/spring-project-infrastructure-updates/#comments</comments>
+		<pubDate>Wed, 27 Jun 2012 20:09:49 +0000</pubDate>
+		<dc:creator>Chris Beams</dc:creator>
+				<category><![CDATA[Builds]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Spring]]></category>
+		<category><![CDATA[Tools]]></category>
+
+		<guid isPermaLink="false">http://blog.springsource.org/?p=11216</guid>
+		<description>Introduction Over the last year a number of significant changes have been made to the infrastructure and processes we use to keep the Spring family of projects running smoothly. You may have seen individual announcements about some of these as they happened, while others may have slipped under your radar. I&amp;#039;ll recap these changes below.  &lt;a href="http://blog.springsource.org/2012/06/27/spring-project-infrastructure-updates/"&gt;&lt;em&gt;Read more...&lt;/em&gt;&lt;/a&gt;&lt;img src="http://feeds.feedburner.com/~r/SpringSourceTeamBlog/~4/OiPA8Pmv3Lg" height="1" width="1"/&gt;</description>
+		<wfw:commentRss>http://blog.springsource.org/2012/06/27/spring-project-infrastructure-updates/feed/</wfw:commentRss>
+		<slash:comments>9</slash:comments>
+		<feedburner:origLink>http://blog.springsource.org/2012/06/27/spring-project-infrastructure-updates/</feedburner:origLink></item>
+		<item>
+		<title>Highlights of Spring for Apache Hadoop 1.0.0 M2</title>
+		<link>http://feedproxy.google.com/~r/SpringSourceTeamBlog/~3/RuFZ7x9taAY/</link>
+		<comments>http://blog.springsource.org/2012/06/13/spring-for-hadoop-1-0-m2/#comments</comments>
+		<pubDate>Wed, 13 Jun 2012 12:02:53 +0000</pubDate>
+		<dc:creator>Costin Leau</dc:creator>
+				<category><![CDATA[Data Access]]></category>
+		<category><![CDATA[Enterprise Integration]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Spring]]></category>
+		<category><![CDATA[Spring Data]]></category>
+		<category><![CDATA[Spring Integration]]></category>
+
+		<guid isPermaLink="false">http://blog.springsource.org/?p=11190</guid>
+		<description>I am happy to announce that the second milestone (1.0.0.M2) of Spring for Apache Hadoop project is available. In this blog post, I would like to quickly highlight the major new features in M2. HBase DAO support One of the most versatile and powerful feature in Spring Framework is the Data Access Object (or DAO)  &lt;a href="http://blog.springsource.org/2012/06/13/spring-for-hadoop-1-0-m2/"&gt;&lt;em&gt;Read more...&lt;/em&gt;&lt;/a&gt;&lt;img src="http://feeds.feedburner.com/~r/SpringSourceTeamBlog/~4/RuFZ7x9taAY" height="1" width="1"/&gt;</description>
+		<wfw:commentRss>http://blog.springsource.org/2012/06/13/spring-for-hadoop-1-0-m2/feed/</wfw:commentRss>
+		<slash:comments>4</slash:comments>
+		<feedburner:origLink>http://blog.springsource.org/2012/06/13/spring-for-hadoop-1-0-m2/</feedburner:origLink></item>
+		<item>
+		<title>Spring Roo 1.2.2.RELEASE available</title>
+		<link>http://feedproxy.google.com/~r/SpringSourceTeamBlog/~3/DrtyFUlBk1A/</link>
+		<comments>http://blog.springsource.org/2012/05/28/spring-roo-1-2-2-release-available/#comments</comments>
+		<pubDate>Mon, 28 May 2012 06:41:55 +0000</pubDate>
+		<dc:creator>Alan Stewart</dc:creator>
+				<category><![CDATA[Spring]]></category>
+
+		<guid isPermaLink="false">http://blog.springsource.org/?p=11157</guid>
+		<description>The Spring Roo team is pleased to announce the availability 1.2.2.RELEASE.  This is the second maintenance release for 1.2 and includes fixes for a number of issues and includes support for Spring Framework 3.1.1 and JDK 7.  Roo 1.2.2 also includes the excellent new &amp;#034;tailor&amp;#034; feature provided by our new partner, Accenture. I hope you  &lt;a href="http://blog.springsource.org/2012/05/28/spring-roo-1-2-2-release-available/"&gt;&lt;em&gt;Read more...&lt;/em&gt;&lt;/a&gt;&lt;img src="http://feeds.feedburner.com/~r/SpringSourceTeamBlog/~4/DrtyFUlBk1A" height="1" width="1"/&gt;</description>
+		<wfw:commentRss>http://blog.springsource.org/2012/05/28/spring-roo-1-2-2-release-available/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		<feedburner:origLink>http://blog.springsource.org/2012/05/28/spring-roo-1-2-2-release-available/</feedburner:origLink></item>
+		<item>
+		<title>Understanding proxy usage in Spring</title>
+		<link>http://feedproxy.google.com/~r/SpringSourceTeamBlog/~3/yhAzB0wD0d8/</link>
+		<comments>http://blog.springsource.org/2012/05/23/understanding-proxy-usage-in-spring/#comments</comments>
+		<pubDate>Wed, 23 May 2012 09:05:21 +0000</pubDate>
+		<dc:creator>Michael Isvy</dc:creator>
+				<category><![CDATA[3.1]]></category>
+		<category><![CDATA[AOP]]></category>
+		<category><![CDATA[Containers]]></category>
+		<category><![CDATA[Spring]]></category>
+
+		<guid isPermaLink="false">http://blog.springsource.org/?p=11113</guid>
+		<description>In the Spring framework, many technical features rely on proxy usage. We are going to go in depth on this topic using three examples: Transactions, Caching and Java Configuration. All the code samples shown in this blog entry are available on my github account. Transactions First step: no transaction The Service class below is not  &lt;a href="http://blog.springsource.org/2012/05/23/understanding-proxy-usage-in-spring/"&gt;&lt;em&gt;Read more...&lt;/em&gt;&lt;/a&gt;&lt;img src="http://feeds.feedburner.com/~r/SpringSourceTeamBlog/~4/yhAzB0wD0d8" height="1" width="1"/&gt;</description>
+		<wfw:commentRss>http://blog.springsource.org/2012/05/23/understanding-proxy-usage-in-spring/feed/</wfw:commentRss>
+		<slash:comments>22</slash:comments>
+		<feedburner:origLink>http://blog.springsource.org/2012/05/23/understanding-proxy-usage-in-spring/</feedburner:origLink></item>
+		<item>
+		<title>Spring MVC 3.2 Preview: Chat Sample</title>
+		<link>http://feedproxy.google.com/~r/SpringSourceTeamBlog/~3/oUbw2lkNPRg/</link>
+		<comments>http://blog.springsource.org/2012/05/16/spring-mvc-3-2-preview-chat-sample/#comments</comments>
+		<pubDate>Wed, 16 May 2012 23:22:55 +0000</pubDate>
+		<dc:creator>Rossen Stoyanchev</dc:creator>
+				<category><![CDATA[Spring]]></category>
+
+		<guid isPermaLink="false">http://blog.springsource.org/?p=11043</guid>
+		<description>My last blog post was based on a Spring AMQP stocks sample that involved reacting to external events. This blog post continues that theme with a chat sample where the external events are not AMQP messages but rather HTTP POST requests. Later on I&amp;#039;ll switch to a distributed chat where the events will be Redis  &lt;a href="http://blog.springsource.org/2012/05/16/spring-mvc-3-2-preview-chat-sample/"&gt;&lt;em&gt;Read more...&lt;/em&gt;&lt;/a&gt;&lt;img src="http://feeds.feedburner.com/~r/SpringSourceTeamBlog/~4/oUbw2lkNPRg" height="1" width="1"/&gt;</description>
+		<wfw:commentRss>http://blog.springsource.org/2012/05/16/spring-mvc-3-2-preview-chat-sample/feed/</wfw:commentRss>
+		<slash:comments>11</slash:comments>
+		<feedburner:origLink>http://blog.springsource.org/2012/05/16/spring-mvc-3-2-preview-chat-sample/</feedburner:origLink></item>
+		<item>
+		<title>Spring MVC 3.2 Preview: Adding Long Polling to an Existing Web Application</title>
+		<link>http://feedproxy.google.com/~r/SpringSourceTeamBlog/~3/IPfo9uFNZNM/</link>
+		<comments>http://blog.springsource.org/2012/05/13/spring-mvc-3-2-preview-adding-long-polling-to-an-existing-web-application/#comments</comments>
+		<pubDate>Mon, 14 May 2012 02:24:20 +0000</pubDate>
+		<dc:creator>Rossen Stoyanchev</dc:creator>
+				<category><![CDATA[Spring]]></category>
+
+		<guid isPermaLink="false">http://blog.springsource.org/?p=11038</guid>
+		<description>In my last post I discussed how to make a Spring MVC controller method asynchronous by returning a Callable which is then invoked in a separate thread by Spring MVC. But what if async processing depended on receiving an external event that will take place in a thread outside the control of the current request  &lt;a href="http://blog.springsource.org/2012/05/13/spring-mvc-3-2-preview-adding-long-polling-to-an-existing-web-application/"&gt;&lt;em&gt;Read more...&lt;/em&gt;&lt;/a&gt;&lt;img src="http://feeds.feedburner.com/~r/SpringSourceTeamBlog/~4/IPfo9uFNZNM" height="1" width="1"/&gt;</description>
+		<wfw:commentRss>http://blog.springsource.org/2012/05/13/spring-mvc-3-2-preview-adding-long-polling-to-an-existing-web-application/feed/</wfw:commentRss>
+		<slash:comments>7</slash:comments>
+		<feedburner:origLink>http://blog.springsource.org/2012/05/13/spring-mvc-3-2-preview-adding-long-polling-to-an-existing-web-application/</feedburner:origLink></item>
+		<item>
+		<title>Spring MVC 3.2 Preview: Making a Controller Method Asynchronous</title>
+		<link>http://feedproxy.google.com/~r/SpringSourceTeamBlog/~3/byf7YG9xtx0/</link>
+		<comments>http://blog.springsource.org/2012/05/10/spring-mvc-3-2-preview-making-a-controller-method-asynchronous/#comments</comments>
+		<pubDate>Thu, 10 May 2012 18:16:06 +0000</pubDate>
+		<dc:creator>Rossen Stoyanchev</dc:creator>
+				<category><![CDATA[Spring]]></category>
+
+		<guid isPermaLink="false">http://blog.springsource.org/?p=11032</guid>
+		<description>In previous posts I introduced the Servlet 3, async support feature in Spring MVC 3.2 M1 and provided background on techniques for real-time updates. In today&amp;#039;s post I&amp;#039;ll turn to the technical details of the new Spring MVC feature and its impact on various aspects of the Spring MVC request lifecycle. To make any existing  &lt;a href="http://blog.springsource.org/2012/05/10/spring-mvc-3-2-preview-making-a-controller-method-asynchronous/"&gt;&lt;em&gt;Read more...&lt;/em&gt;&lt;/a&gt;&lt;img src="http://feeds.feedburner.com/~r/SpringSourceTeamBlog/~4/byf7YG9xtx0" height="1" width="1"/&gt;</description>
+		<wfw:commentRss>http://blog.springsource.org/2012/05/10/spring-mvc-3-2-preview-making-a-controller-method-asynchronous/feed/</wfw:commentRss>
+		<slash:comments>20</slash:comments>
+		<feedburner:origLink>http://blog.springsource.org/2012/05/10/spring-mvc-3-2-preview-making-a-controller-method-asynchronous/</feedburner:origLink></item>
+	</channel>
+</rss>

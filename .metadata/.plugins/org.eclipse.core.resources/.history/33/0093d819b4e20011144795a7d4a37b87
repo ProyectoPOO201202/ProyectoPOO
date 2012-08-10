@@ -1,0 +1,111 @@
+package testControlador;
+
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.mock;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import com.csvreader.CsvReader;
+
+import controlador.GrupoEstudioControlador;
+import dominio.GrupoEstudio;
+import dominio.DAO.DataBase;
+
+public class testGrupoEstudioControlador {
+	private DataBase bdMock;
+	private GrupoEstudioControlador proveedorControlador;
+	private List<GrupoEstudio> listaEmpresas = new ArrayList<GrupoEstudio>();
+	
+	@Before
+    public void setUp() throws Exception 
+    {		
+		proveedorControlador = new GrupoEstudioControlador();
+		bdMock  = mock(DataBase.class);
+		proveedorControlador.setDataBase(bdMock);
+	    doReturn(listaEmpresas).when(bdMock).tablaGrupoEstudio();
+		for(int i=10001; i<=10015; i++)
+		{
+			proveedorControlador.registrarGrupoEstudio("01" + i, "ff " + i, "Modulo1", 
+					"Aduni " + i ,"Matematicas" + i , "01-01-2012" , 
+					"30-02-2012" + i, "Juan Perez" + i, "http:\\linkestudios"+ i, 
+					"La Marina"+ i, "322"+ i, "xxxx"+ i,"EN_CURSO" + i);			
+		}	
+		
+	}
+	
+	//@Test
+	public void testListarGrupoEstudioRegistradas(){
+		
+		List<GrupoEstudio> grupoestudio = new ArrayList<GrupoEstudio>();
+		grupoestudio = proveedorControlador.devolverListaGrupoEstudio();
+		for(GrupoEstudio grupoestudio : grupoestudio){
+			System.out.println(grupoestudio.getCodGrupo() + " " + grupoestudio.getNombregrupo()
+					+ " " + grupoestudio.getNombregrupo()
+					+ " " + grupoestudio.getDescripcion()
+					+ " " + grupoestudio.getAcademia()
+					+ " " + grupoestudio.getCurso()
+					+ " " + grupoestudio.getFechainicio()
+					+ " " + grupoestudio.getFechafin()
+					+ " " + grupoestudio.getInstructor()
+					+ " " + grupoestudio.getLink()
+					+ " " + grupoestudio.getLocal()
+					+ " " + grupoestudio.getAula()
+					+ " " + grupoestudio.getCoordenadas()	
+					+ " " + grupoestudio.getEstado()
+					);
+		}
+		System.out.println("Total Empresas registradas : " + proveedorControlador.devolverListaGrupoEstudio());
+		assertEquals(15, proveedorControlador.cantidadGrupoEstudio());
+	}
+	
+	@Test
+	public void testImportarGrupoEstudio(){
+		
+		proveedorControlador.limpiaListaGrupoEstudio();
+		proveedorControlador.importarGrupoEstudio("test/csv/empresa_import.csv");
+		
+		try {
+					
+			List<GrupoEstudio> proveedor = new ArrayList<GrupoEstudio>();
+			proveedor = proveedorControlador.devolverListaGrupoEstudio();
+			
+			int contador = 0;
+			
+			CsvReader proveedor3 = new CsvReader("test/csv/grupoestudio_import.csv");	
+			proveedor3.readHeaders();
+			
+			while (proveedor3.readRecord()){	
+				
+				assertEquals(proveedor.get(contador).getCodigo(), proveedor3.get(0));
+				assertEquals(proveedor.get(contador).getRazon_social(), proveedor3.get(1));
+				assertEquals(proveedor.get(contador).getRubro(), proveedor3.get(2));
+				assertEquals(proveedor.get(contador).getDireccion(), proveedor3.get(3));				
+				assertEquals(proveedor.get(contador).getCorreo(), proveedor3.get(4));
+				assertEquals(proveedor.get(contador).getTelefono(), proveedor3.get(5));
+				assertEquals(proveedor.get(contador).getCiudad(), proveedor3.get(6));				
+				assertEquals(proveedor.get(contador).getPais(), proveedor3.get(7));
+				assertEquals(proveedor.get(contador).getEstado(), proveedor3.get(8));		
+				assertEquals(proveedor.get(contador).getObservaciones(), proveedor3.get(9));
+						
+				contador++;
+			}
+	
+			proveedor3.close();
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	//prueba
+	
+	
+}
