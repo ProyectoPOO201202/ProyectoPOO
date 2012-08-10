@@ -1,0 +1,5 @@
+package dominio.DAO;
+
+public class GrupoEstudioDAO {
+
+}
