@@ -75,12 +75,26 @@ public class Rol {
 		this.actualizado_el = actualizado_el;
 	}
 
-	public String getCodigo() {
+	public String getCodigo1() {
 		return codigo;
 	}
 
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;
+	}
+
+
+
+	public Object getCodigo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+	public Object getnombrerol() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	
