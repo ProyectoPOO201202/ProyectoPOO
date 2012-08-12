@@ -1,11 +1,11 @@
 package dominio;
 
-import java.util.Locale;
+//import java.util.Locale;
 
 import org.joda.time.LocalDate;
 
 
-@SuppressWarnings("unused")
+//@SuppressWarnings("unused")
 public class Usuario {
 	
 	private String dni;

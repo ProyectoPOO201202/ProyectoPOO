@@ -19,7 +19,7 @@ public class GrupoEstudioAdmin {
 	             // Crear un nuevo GrupoEstudio y registrarlo en la coleccion
 	             grupos.add(new GrupoEstudio(nombregrupo,descripcion,academia,
 	            		 curso,fechainicio,fechafin,instructor,
-	            		 link,local,aula,coordenadas));
+	            		 link,local,aula,coordenadas, coordenadas, coordenadas));
 	             return true;
 	         }
 	         return false;

@@ -18,6 +18,7 @@ public class FuncionesTest {
 		
 		Assert.assertTrue(funcion.valCorreo("xxx@xxx.com"));
 		Assert.assertTrue(funcion.valCorreo("xxx@xxx.com.pe"));
+		Assert.assertTrue(funcion.valCorreo("xxx@xxx.edu.pe"));
 		
 		//fail("Not yet implemented");
 	}
