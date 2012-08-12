@@ -1,0 +1,13 @@
+1344744407716	Delete element
+1344753304128	Convert local variable 'Nombregrupo' to field
+1344753346792	Convert local variable 'Academia' to field
+1344753352247	Convert local variable 'Curso' to field
+1344753355738	Convert local variable 'Fechainicio' to field
+1344753358646	Convert local variable 'Fechafin' to field
+1344753361672	Convert local variable 'Estado' to field
+1344753543280	Encapsulate field 'nombregrupo'
+1344753566530	Encapsulate field 'academia'
+1344753579082	Encapsulate field 'curso'
+1344753585067	Encapsulate field 'fechainicio'
+1344753590182	Encapsulate field 'fechafin'
+1344753598043	Encapsulate field 'estado'

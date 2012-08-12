@@ -13,7 +13,7 @@ public class Clientetest {
 	public void TestCliente(){
 		
 		
-		Cliente cliente1 = new Cliente();
+	Cliente cliente1 = new Cliente();
 		
 	cliente1.setDni("45538817");
 	cliente1.setNombres("Eduardo");
