@@ -12,11 +12,22 @@ public class Rol {
 	private String actualizado_el;
 	
 	
-	public Rol(int i, String string, int j, int k, int l, int m, BigDecimal bigDecimal) {
+	//public Rol(int i, String string, int j, int k, int l, int m, BigDecimal bigDecimal) {
+		// TODO Auto-generated constructor stub
+	//}
+
+	
+
+	
+
+	public Rol(String codigo, String decripcion, String creado_por, String creado_el)
+			 {
 		// TODO Auto-generated constructor stub
 	}
 
-	
+	public Rol(int i, Object object, int j, int k, int l, int m, Object object2) {
+		// TODO Auto-generated constructor stub
+	}
 
 	public void crearRol(String codigo, String descripcion, String creado_por,
 			String creado_el) {		

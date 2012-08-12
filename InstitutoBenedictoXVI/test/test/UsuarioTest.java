@@ -1,7 +1,7 @@
 package test;
 
 
-import java.math.BigDecimal;
+//import java.math.BigDecimal;
 
 import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
@@ -18,9 +18,10 @@ public class UsuarioTest {
 	public void testUser() {
 	//fail("Not yet implemented");
 		LocalDate FechaActual = new DateTime().toLocalDate();
-		Rol rol = new Rol(101, "admin", 2, 5, 15, 10, new BigDecimal("0.00"));
+		Rol rol = new Rol("101", "admin", "2", "5");
 		Academia academia = new Academia();
 		academia.setNombre("BenedictoXVI");
+		
 		Usuario usuario = new Usuario();
 		
 		usuario.setDni("45646253");

@@ -24,7 +24,7 @@ public class UsuarioControladorTest {
 	@Test
 	public void testValidarUsuario() {
 		//fail("Not yet implemented");
-		boolean result =true;
+		boolean result = true;
 		
 		try {
 		UsuarioControlador controlador = new UsuarioControlador();
@@ -74,7 +74,7 @@ public void testCrearUsuario() {
 		String apellidoPaterno = "Paredes";
 		String apellidoMaterno = "Diaz";
 		String cargo = "administrador";
-		String correo = "user@user.com";
+		String correo = "user@upc.edu.com";
 		String clave = "user";
 		boolean flag = true;
 	resultadoValidar = controlador.validarUsuario(correo, clave, confirmarcontrasena, flag);
