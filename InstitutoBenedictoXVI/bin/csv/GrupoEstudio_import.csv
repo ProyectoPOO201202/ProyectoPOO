@@ -1,0 +1,6 @@
+codGrupo;nombregrupo;descripcion;academia;curso;fechainicio;fechafin;instructor;link;local;aula;coordenadas;estado;
+01;Programacion;Programacion Orientada a Objetos;El Buen Pastor;01-08-2012;30-09-2012;Miguel Fernandez;http://www.lawebdelprogramador.com/;Miraflores;201;lon:110-lat:100;EN_CURSO;
+02;Busines Intelelling;Reporting Services;Acuni;01-06-2012;30-08-2012;Michael Valverde;http://todobi.blogspot.com/;San Isidro;501;lon:112-lat:140;EN_CURSO;
+03;Mastertech;Reparacion y Emsamblaje;Sise;15-04-2013;30-09-2013;Pablo Calero;http://www.alertapc.tk/index.html;Lima Cercado;103;lon:111-lat:128;EN_CURSO;
+04;Base de Datos;SQL 2008 server;Sise;01-05-2012;30-06-2012;Ricardo Cortez;http://www.w3schools.com/sql/default.asp/;Miraflores;101;lon:109-lat:120;FINALIZADO;
+05;Programacion;Programacion Orientada a Objetos;El Buen Pator;15-09-2012;30-12-2012;Daniel Ortiz;http://www.elguille.com/;Miraflores;204;lon:115-lat:103;ANULADO;
