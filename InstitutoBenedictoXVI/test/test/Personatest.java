@@ -12,7 +12,7 @@ public  class Personatest {
 @Test
 public void TestPersona(){
 
-Persona persona1 = new Cliente("45538817","Eduardo","Rodriguez","Valladares","4984384", "10/12/1987", "tito.rodriguev@hotmail.com","Callao","Bellavista","Callao");
+Persona persona1 = new Cliente("","45538817","Eduardo","Rodriguez","Valladares","4984384", "10/12/1987", "tito.rodriguev@hotmail.com","Callao","Bellavista","Callao");
 
 //Asserts
 assertEquals("45538817",persona1.getDni());
