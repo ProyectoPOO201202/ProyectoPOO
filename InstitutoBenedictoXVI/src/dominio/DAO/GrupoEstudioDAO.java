@@ -20,7 +20,7 @@ public class GrupoEstudioDAO {
     public void modificarGrupoEstudio(String CodGrupo, String Nombregrupo, String Descripcion,
     		String Academia, String Curso, String Fechainicio,
     		String Fechafin, String Instructor, String Link,
-    		String Local, String Aula, String Coordenadas, String Estado){
+    		String Local, String Aula, String Coordenadas, String Estado){    	
     	
     	GrupoEstudio grupoestudio = obtenerGrupoEstudioPorCodigo(CodGrupo);
     	grupoestudio.setNombregrupo(Nombregrupo);	

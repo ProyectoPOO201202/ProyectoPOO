@@ -7,12 +7,11 @@ import static org.mockito.Mockito.mock;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.math.BigDecimal;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import org.joda.time.DateTime;
-import org.joda.time.LocalDate;
+
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -20,11 +19,10 @@ import com.csvreader.CsvReader;
 
 
 
-import controlador.EmpresaControlador;
+
 import controlador.PersonaControlador;
 
 
-import dominio.Empresa;
 import dominio.Persona;
 import dominio.Prospecto;
 import dominio.DAO.BaseDatosMock;

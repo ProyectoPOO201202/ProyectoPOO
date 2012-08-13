@@ -18,34 +18,27 @@ public class GrupoEstudio {
 		 private String Coordenadas;
 		 private String Estado;
 		 
-		 
-		   public GrupoEstudio() {
-
-		    }
-		   /*public String Estado {
-		        EN_CURSO, CANCELADO , FINALIZADO
-		    }*/
-		 
-		 public GrupoEstudio(String codGrupo, String nombregrupo,
-					String descripcion, String academia, String curso,
-					String fechainicio, String fechafin, String instructor,
-					String link, String local, String aula, String coordenadas,
-					String estado) throws ParametroIncompleto {
-				super();
-				
-				if (codGrupo.equals("")){
-					throw new ParametroIncompleto("codigo de grupo");
-				}
-				else if (nombregrupo.equals("")){
-					throw new ParametroIncompleto("nombre de grupo");
-				}	
-				else if (fechainicio.equals("")){
-					throw new ParametroIncompleto("fecha de inicio");
-				}	
-				else if (fechafin.equals("")){
-						throw new ParametroIncompleto("fecha de fin");
-				} 		 
-		 
+		
+		public GrupoEstudio(String codGrupo, String nombregrupo,
+				String descripcion, String academia, String curso,
+				String fechainicio, String fechafin, String instructor,
+				String link, String local, String aula, String coordenadas,
+				String estado) throws ParametroIncompleto {
+			super();
+			
+			if (codGrupo.equals("")){
+				throw new ParametroIncompleto("codigo de grupo");
+			}
+			else if (nombregrupo.equals("")){
+				throw new ParametroIncompleto("nombre de grupo");
+			}	
+			else if (fechainicio.equals("")){
+				throw new ParametroIncompleto("fecha de inicio");
+			}	
+			else if (fechafin.equals("")){
+					throw new ParametroIncompleto("fecha de fin");
+			}
+			
 			CodGrupo = codGrupo;
 			Nombregrupo = nombregrupo;
 			Descripcion = descripcion;
@@ -59,8 +52,9 @@ public class GrupoEstudio {
 			Aula = aula;
 			Coordenadas = coordenadas;
 			Estado = estado;
-		
+			
 		}
+		
 		public String getCodGrupo() {
 			return CodGrupo;
 		}

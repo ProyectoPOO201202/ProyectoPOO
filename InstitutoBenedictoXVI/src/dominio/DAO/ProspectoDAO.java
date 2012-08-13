@@ -3,8 +3,6 @@ package dominio.DAO;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.joda.time.LocalDate;
-
 import dominio.Persona;
 import dominio.Prospecto;
 import dominio.DAO.BaseDatosMock;

@@ -5,22 +5,25 @@ import java.util.ArrayList;
 public class GrupoEstudioAdmin {
 	    // Declaracion de la coleccion de GrupoEstudio
 	    private ArrayList<GrupoEstudio> grupos;
+	    
 
 	    public GrupoEstudioAdmin() {
 	    // Crear la coleccion de objetos GrupoEstudio
 	    	grupos = new ArrayList<GrupoEstudio>();
 	    }
-	    
-	    public boolean RegistrarGrupoEstudio(String nombregrupo, String descripcion,
+	     
+	    public boolean RegistrarGrupoEstudio(String codigo, String nombregrupo, String descripcion,
 				String academia, String curso, String fechainicio, String fechafin,
 				String instructor, String link, String local, String aula,
-				String coordenadas) throws ParametroIncompleto {
+				String coordenadas,String estado) throws ParametroIncompleto {
+	    	
+	    	GrupoEstudio grupoEstudio = new GrupoEstudio(estado, estado, estado, estado, estado, estado, estado, estado, estado, estado, estado, estado, estado);
+	    	
 	         if  (buscar(nombregrupo) == null){
 	             // Crear un nuevo GrupoEstudio y registrarlo en la coleccion
-	             grupos.add(new GrupoEstudio(nombregrupo,descripcion,academia,
-	            		 curso,fechainicio,fechafin,instructor,
-	            		 link,local,aula,coordenadas));
-	             return true;
+	        	
+	        	 grupos.add(grupoEstudio);	        	 
+	       	     return true;
 	         }
 	         return false;
 	    }
