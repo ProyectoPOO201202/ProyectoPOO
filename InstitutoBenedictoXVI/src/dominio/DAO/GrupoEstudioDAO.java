@@ -13,7 +13,7 @@ public class GrupoEstudioDAO {
         GrupoEstudioDAO.bdMock = bdMock;
     }
 
-    public void crearGrupoEstudio(GrupoEstudio grupoestudio) {
+    public static void crearGrupoEstudio(GrupoEstudio grupoestudio) {
         bdMock.tablaGrupoEstudio().add(grupoestudio);
     }
     
@@ -37,9 +37,20 @@ public class GrupoEstudioDAO {
     	grupoestudio.setEstado(Estado);
  	}
     
-	private dominio.GrupoEstudio obtenerGrupoEstudioPorCodigo(String codGrupo) {
-		// TODO Auto-generated method stub
-		return null;
+	public static dominio.GrupoEstudio obtenerGrupoEstudioPorCodigo(String codGrupo) {
+		GrupoEstudio GrupoEstudio = null;
+	        List<GrupoEstudio> GrupoEstudio1 = bdMock.devolverGrupoEstudio();
+
+	        for (int i = 0; i < GrupoEstudio1.size(); i++) {
+
+	        	GrupoEstudio hab = GrupoEstudio1.get(i);
+
+	            if (codGrupo.equals(hab.getCodGrupo())) {
+	                return hab;
+	            }
+	        }
+
+	        return GrupoEstudio;
 	}
 
 	public ArrayList<GrupoEstudio> devolverListaBusquedaGrupoEstudioDescripcion(String descripcion){
@@ -56,7 +67,7 @@ public class GrupoEstudioDAO {
 		return resultadoBusquedaGrupoEstudio;
     }
     
-	public void eliminarGrupoEstudio(String CodGrupo){
+	public static void eliminarGrupoEstudio(String CodGrupo){
         for(int i = 0; i < cantidadGrupoEstudio(); i++)
         {            
         	GrupoEstudio m = devolverGrupoEstudio().get(i);          
@@ -93,5 +104,10 @@ public class GrupoEstudioDAO {
     public void limpiaListaGrupoEstudio() {
         bdMock.tablaEmpresa().clear();
     }
+
+	public static void modificarGrupoEstudio(String nombre,
+			GrupoEstudio grupoEstudio1) {
+		
+	}
 	
 }

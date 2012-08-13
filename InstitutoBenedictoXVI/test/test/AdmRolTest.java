@@ -21,7 +21,7 @@ public class AdmRolTest {
 		
 		Rol rol = admrol.buscarRol(codrol);
 		assertNotNull(rol);
-		assertEquals(codrol, rol.getcodrol());
+		assertEquals(codrol, rol.getCodigo());
 		assertEquals(nombrerol, rol.getnombrerol());
 		
 	}

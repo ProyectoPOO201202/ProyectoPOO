@@ -6,6 +6,20 @@
  <description>Welcome to the home of Spring, the leading platform to build and run enterprise Java applications. Led and sustained by SpringSource, Spring delivers significant benefits for many projects, increasing development productivity and runtime performance while improving test coverage and application quality.</description>
  <language>en</language>
 <item>
+ <title>Spring Security 3.1.2 Released</title>
+ <link>http://www.springsource.org/node/3625</link>
+ <description>&lt;p&gt;We&#039;re pleased to an announce the GA release of Spring Security 3.1.2&lt;br /&gt;
+The release is available from the &lt;a href=&quot;http://www.springsource.com/download/community?project=Spring%20Security&quot;&gt;Spring Community Downloads area&lt;/a&gt; and jars are available from Maven central repository. See the &lt;a href=&quot;http://www.springsource.org/spring-security&quot;&gt;project website&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;p&gt;Special thanks to Chris Beams for all his help and guidance with updating the Spring Security build to use the &lt;a href=&quot;https://github.com/SpringSource/spring-framework/wiki/Gradle-build-and-release-FAQ#wiki-release_process&quot;&gt;Spring release process&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://jira.springsource.org/secure/ReleaseNote.jspa?projectId=10040&amp;amp;version=13105&quot;&gt;Changelog&lt;/a&gt; | &lt;a href=&quot;http://www.springsource.com/download/community?project=Spring%20Security&amp;amp;version=3.1.2.RELEASE&quot;&gt;Download&lt;/a&gt; | &lt;a href=&quot;http://static.springsource.org/spring-security/site/docs/3.1.x/reference/springsecurity-single.html&quot;&gt;Reference Manual&lt;/a&gt; | &lt;a href=&quot;http://static.springsource.org/spring-security/site/faq.html&quot;&gt;FAQ&lt;/a&gt;&lt;/p&gt;
+</description>
+ <comments>http://www.springsource.org/node/3625#comments</comments>
+ <category domain="http://www.springsource.org/taxonomy/term/4">News and Announcements</category>
+ <pubDate>Fri, 10 Aug 2012 14:15:39 +0000</pubDate>
+ <dc:creator>rwinch</dc:creator>
+ <guid isPermaLink="false">3625 at http://www.springsource.org</guid>
+</item>
+<item>
  <title>This Week in Spring - August 7th, 2012</title>
  <link>http://www.springsource.org/node/3623</link>
  <description> &lt;P&gt; 
@@ -290,46 +304,6 @@ Readers and users of all experience levels will find something of value in this 
  <pubDate>Wed, 18 Jul 2012 21:01:54 +0000</pubDate>
  <dc:creator>Costin Leau</dc:creator>
  <guid isPermaLink="false">3600 at http://www.springsource.org</guid>
-</item>
-<item>
- <title>This Week in Spring - July 17th, 2012</title>
- <link>http://www.springsource.org/node/3599</link>
- <description> 
-&lt;P&gt; Welcome to another installment of &lt;EM&gt;This Week in Spring&lt;/EM&gt;!  This week, the SpringSource and Cloud Foundry teams are OSCON talking about open source enterprise and cloud computing with anybody and everybody. If you&#039;re in the region, be sure to check out the SpringSource and Cloud Foundry booth in the exhibition hall!
-&lt;/P&gt; 
-
-&lt;OL&gt;	&lt;LI&gt; The Spring Data team is working on &lt;a href = &quot;http://ofps.oreilly.com/titles/9781449323950/&quot;&gt;a book with O&#039;Reilly  on Spring Data&lt;/a&gt;.  If you want to preview and feedback, now&#039;s your chance! 
-		&lt;/LI&gt;	&lt;LI&gt; 
-Are you using Spring Data Commons support for repositories? How  would you feel about support for Java-centric configuration? &lt;a href = &quot;https://jira.springsource.org/browse/DATACMNS-47#comment-81637&quot;&gt;Check out the new support for Java-configuration in Spring Data&lt;/A&gt;!   
-&lt;/LI&gt; 
-
- 	&lt;LI&gt; The Java Beginner&#039;s tutorial blog has a quick post on  &lt;a href = &quot;http://javabeginnerstutorial.com/spring-framework-tutorial/configure-hsqldb-java-spring/&quot;&gt;how to use the embedded database namespace that debuted in Spring 3.0&lt;/A&gt;. The &lt;a href = &quot;http://static.springsource.org/spring/docs/3.1.x/spring-framework-reference/htmlsingle/spring-framework-reference.html#jdbc-embedded-database-support&quot;&gt;namespace&lt;/A&gt; is great if you want to setup H2, HSQL and Derby instances quickly and then specify initialization &lt;CODE&gt;.SQL&lt;/CODE&gt; statements or scripts to run to initialize the database to a known state. This is particularly useful in quicker integration tests. 
-	  &lt;/LI&gt;
-	
-	&lt;LI&gt; Jeroen Horemans has a great post on &lt;a href  = &quot;http://www.cleanjava.org/blog/?p=96&quot;&gt;using EclipseLink (the JPA implementation) and Spring   together&lt;/A&gt;.  &lt;/LI&gt;
- 	&lt;LI&gt; Marco Tedone has a great blog on &lt;a href = &quot;http://tedone.typepad.com/blog/2011/08/jmx-and-spring-part-1.html&quot;&gt;using JMX and Spring together&lt;/A&gt;.  &lt;/LI&gt;
-	&lt;LI&gt; Geraint Jones  has a great post on &lt;a href = &quot;http://city81.blogspot.co.uk/2012/07/using-spring-data-to-access-mongodb.html&quot;&gt;using Spring Data MongoDB to access MongoDB instances&lt;/A&gt;.   &lt;/LI&gt;
- 		
-	
-	&lt;LI&gt; &lt;a href = &quot;http://www.twitter.com/olivergierke&quot;&gt;@olivergierke&lt;/A&gt;, Spring Data ninja and contributor, tweeted about a nascent  project that &lt;a href = &quot;http://code.google.com/p/sol-dock-r/&quot;&gt; supports Spring Data-centric access to Apache Solr repositories&lt;/a&gt;, which looks very interesting! Check it out! 
-		&lt;/LI&gt;
-	&lt;LI&gt; Lijin Joseji has a great post on how to setup &lt;a href =&quot;http://architects.dzone.com/articles/do-not-delete-how-create&quot;&gt;a simple CRUD application using Java and MongoDB and Spring Data&lt;/A&gt;.   Definitely worth a read! 
-		&lt;/LI&gt;
-	
-		
-				&lt;LI&gt; Are you having trouble setting up the &lt;a href = &quot;http://www.twitter.com/cloudfounry&quot;&gt;@cloudfoundry&lt;/A&gt; gem support for service tunneling on Windows?  To recap, a) install &lt;A href = &quot;http://www.rubyinstaller.org&quot;&gt;Ruby&lt;/A&gt;, then install  &lt;a href = &quot;http://rubyinstaller.org/add-ons/devkit/&quot;&gt;DevKit&lt;/a&gt;, then install the Event Machine gem, like this &lt;code&gt; gem install eventmachine --pre -v &#039;1.0.0.beta.4.1&#039;&lt;/code&gt;, &lt;EM&gt;then&lt;/EM&gt; install the tunnel, like this &lt;CODE&gt;gem install caldecott&lt;/code&gt;. You should be able to start a new shell, register an account on &lt;a href= &quot;http://www.cloudfoundry.com&quot;&gt;Cloud Foundry&lt;/a&gt;, and start building Spring applications with &lt;a href = &quot;http://www.springsource.com/developer/sts&quot;&gt; the SpringSource Tool Suite &lt;/a&gt; in no time! &lt;/LI&gt;
-					
-					
-	&lt;LI&gt; Stacey Schneider has put together a nice blog introducing &lt;EM&gt;why&lt;/EM&gt; &lt;a href =&quot;http://blogs.vmware.com/vfabric/2012/07/why-java-developers-need-spring-insight-on-cloudfoundry.html&quot;&gt;Spring Insight should be a part of your Cloud Foundry experience&lt;/A&gt; &lt;/LI&gt; 
-	
-	&lt;LI&gt; This post has almost nothing to do with Spring, but I&#039;ve seen the error enough in Spring applications that it is worth trying to provide help. If you &lt;a href = &quot;http://ejvyas.blogspot.com/2012/07/oracle-sid-error.html&quot;&gt; use Spring with the Oracle database driver and have trouble connecting, with errors about the SID&lt;/A&gt;, you might appreciate this blog. &lt;/LI&gt;
- 
-&lt;/OL&gt;</description>
- <comments>http://www.springsource.org/node/3599#comments</comments>
- <category domain="http://www.springsource.org/taxonomy/term/4">News and Announcements</category>
- <pubDate>Wed, 18 Jul 2012 02:51:37 +0000</pubDate>
- <dc:creator>Josh Long</dc:creator>
- <guid isPermaLink="false">3599 at http://www.springsource.org</guid>
 </item>
 </channel>
 </rss>

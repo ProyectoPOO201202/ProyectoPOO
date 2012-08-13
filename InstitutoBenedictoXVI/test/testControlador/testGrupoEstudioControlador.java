@@ -1,8 +1,6 @@
 package testControlador;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.doReturn;
-import static org.mockito.Mockito.mock;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -11,8 +9,6 @@ import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import com.csvreader.CsvReader;
 
 import controlador.GrupoEstudioControlador;
 import dominio.GrupoEstudio;
@@ -40,7 +36,8 @@ public class testGrupoEstudioControlador {
 		}	
 		
 	}
-	
+
+
 	//@Test
 	public void testListarGrupoEstudioRegistradas(){
 		
@@ -79,7 +76,7 @@ public class testGrupoEstudioControlador {
 			
 			int contador = 0;
 			
-			CsvReader proveedor3 = new CsvReader("test/csv/grupoestudio_import.csv");	
+			CsvReader proveedor3 = new CsvReader("test/csv/GrupoEstudio_import.csv");	
 			proveedor3.readHeaders();
 			
 			while (proveedor3.readRecord()){	
