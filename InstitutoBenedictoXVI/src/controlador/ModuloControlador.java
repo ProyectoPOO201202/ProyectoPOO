@@ -60,8 +60,8 @@ public void importarModulo(String nombreArchivo){
         this.moduloDAO.setBaseDatosMock(bdMock);
     }
 	
-	public void limpiaListaEmpresa() {
-		this.moduloDAO.limpiaListaEmpresa();
+	public void limpiaListaModulo() {
+		this.moduloDAO.limpiaListaModulo();
     }
 
 }

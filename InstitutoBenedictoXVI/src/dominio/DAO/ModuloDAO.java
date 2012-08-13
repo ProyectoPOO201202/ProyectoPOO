@@ -26,16 +26,16 @@ public class ModuloDAO {
     
 	public ArrayList<Modulo> devolverListaBusquedaModuloDescripcion(String descripcion){
         
-		ArrayList<Modulo> resultadoBusquedaEmpresas = new ArrayList<Modulo>();
+		ArrayList<Modulo> resultadoBusquedaModulo = new ArrayList<Modulo>();
 		for(int i = 0; i < cantidadModulo(); i++)
 		{            
 			Modulo m = devolverModulo().get(i);          
             if(m.getDescripcion().indexOf(descripcion) > -1)
             {
-            	resultadoBusquedaEmpresas.add(m);
+            	resultadoBusquedaModulo.add(m);
             }
         }		
-		return resultadoBusquedaEmpresas;
+		return resultadoBusquedaModulo;
     }
     
 	public void eliminarModulo(String codigo){
@@ -71,7 +71,7 @@ public class ModuloDAO {
         return bdMock.tablaModulo();
     }
     
-    public void limpiaListaEmpresa() {
+    public void limpiaListaModulo() {
         bdMock.tablaEmpresa().clear();
     }
 }

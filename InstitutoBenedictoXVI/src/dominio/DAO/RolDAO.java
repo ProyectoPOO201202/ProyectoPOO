@@ -71,8 +71,8 @@
 	        return bdMock.tablaRol();
 	    }
 	    
-	    public void limpiaListaEmpresa() {
-	        bdMock.tablaEmpresa().clear();
+	    public void limpiaListaRol() {
+	        bdMock.tablaRol().clear();
 	    }
 	}
 
