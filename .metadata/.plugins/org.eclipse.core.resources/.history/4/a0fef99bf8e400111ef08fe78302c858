@@ -38,19 +38,7 @@ public class GrupoEstudioDAO {
  	}
     
 	public static dominio.GrupoEstudio obtenerGrupoEstudioPorCodigo(String codGrupo) {
-		GrupoEstudio GrupoEstudio = null;
-	        List<GrupoEstudio> GrupoEstudio1 = bdMock.devolverGrupoEstudio();
-
-	        for (int i = 0; i < GrupoEstudio1.size(); i++) {
-
-	        	GrupoEstudio hab = GrupoEstudio1.get(i);
-
-	            if (codGrupo.equals(hab.getCodGrupo())) {
-	                return hab;
-	            }
-	        }
-
-	        return GrupoEstudio;
+		return null;
 	}
 
 	public ArrayList<GrupoEstudio> devolverListaBusquedaGrupoEstudioDescripcion(String descripcion){

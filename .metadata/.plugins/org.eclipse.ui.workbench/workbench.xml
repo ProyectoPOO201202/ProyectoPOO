@@ -278,11 +278,38 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RegistroDuplicado.java" tooltip="InstitutoBenedictoXVI/src/dominio/RegistroDuplicado.java">
-<persistable path="/InstitutoBenedictoXVI/src/dominio/RegistroDuplicado.java"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GrupoEstudio.java" tooltip="InstitutoBenedictoXVI/src/dominio/GrupoEstudio.java">
 <persistable path="/InstitutoBenedictoXVI/src/dominio/GrupoEstudio.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataBase.java" tooltip="InstitutoBenedictoXVI/src/dominio/DAO/DataBase.java">
+<persistable path="/InstitutoBenedictoXVI/src/dominio/DAO/DataBase.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Modulo.java" tooltip="InstitutoBenedictoXVI/src/dominio/Modulo.java">
+<persistable path="/InstitutoBenedictoXVI/src/dominio/Modulo.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GrupoEstudioDAO.java" tooltip="InstitutoBenedictoXVI/src/dominio/DAO/GrupoEstudioDAO.java">
+<persistable path="/InstitutoBenedictoXVI/src/dominio/DAO/GrupoEstudioDAO.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EmpresaControlador.java" tooltip="InstitutoBenedictoXVI/src/controlador/EmpresaControlador.java">
+<persistable path="/InstitutoBenedictoXVI/src/controlador/EmpresaControlador.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GrupoEstudioControlador.java" tooltip="InstitutoBenedictoXVI/src/controlador/GrupoEstudioControlador.java">
+<persistable path="/InstitutoBenedictoXVI/src/controlador/GrupoEstudioControlador.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GrupoEstudioTest.java" tooltip="InstitutoBenedictoXVI/test/test/GrupoEstudioTest.java">
+<persistable path="/InstitutoBenedictoXVI/test/test/GrupoEstudioTest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="testEmpresaControlador.java" tooltip="InstitutoBenedictoXVI/test/testControlador/testEmpresaControlador.java">
+<persistable path="/InstitutoBenedictoXVI/test/testControlador/testEmpresaControlador.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="testGrupoEstudioControlador.java" tooltip="InstitutoBenedictoXVI/test/testControlador/testGrupoEstudioControlador.java">
+<persistable path="/InstitutoBenedictoXVI/test/testControlador/testGrupoEstudioControlador.java"/>
+</file>
+<file factoryID="com.springsource.sts.ide.ui.dashboard.elementFactory" id="com.springsource.sts.internal.ide.ui.editors.MultiPageDashboardEditor" name="Dashboard" tooltip="Dashboard">
+<persistable openDashboard="true"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RegistroDuplicado.java" tooltip="InstitutoBenedictoXVI/src/dominio/RegistroDuplicado.java">
+<persistable path="/InstitutoBenedictoXVI/src/dominio/RegistroDuplicado.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Transaccion.java" tooltip="InstitutoBenedictoXVI/src/dominio/Transaccion.java">
 <persistable path="/InstitutoBenedictoXVI/src/dominio/Transaccion.java"/>
@@ -295,33 +322,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Curso.java" tooltip="InstitutoBenedictoXVI/src/dominio/Curso.java">
 <persistable path="/InstitutoBenedictoXVI/src/dominio/Curso.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Clientetest.java" tooltip="InstitutoBenedictoXVI/test/test/Clientetest.java">
-<persistable path="/InstitutoBenedictoXVI/test/test/Clientetest.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Clientealta.java" tooltip="InstitutoBenedictoXVI/src/dominio/Clientealta.java">
-<persistable path="/InstitutoBenedictoXVI/src/dominio/Clientealta.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Cliente.java" tooltip="InstitutoBenedictoXVI/src/dominio/Cliente.java">
-<persistable path="/InstitutoBenedictoXVI/src/dominio/Cliente.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EmpresaTest.java" tooltip="InstitutoBenedictoXVI/test/test/EmpresaTest.java">
-<persistable path="/InstitutoBenedictoXVI/test/test/EmpresaTest.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="testGrupoEstudioControlador.java" tooltip="InstitutoBenedictoXVI/test/testControlador/testGrupoEstudioControlador.java">
-<persistable path="/InstitutoBenedictoXVI/test/testControlador/testGrupoEstudioControlador.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GrupoEstudioAdmin.java" tooltip="InstitutoBenedictoXVI/src/dominio/GrupoEstudioAdmin.java">
-<persistable path="/InstitutoBenedictoXVI/src/dominio/GrupoEstudioAdmin.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GrupoEstudioTest.java" tooltip="InstitutoBenedictoXVI/test/test/GrupoEstudioTest.java">
-<persistable path="/InstitutoBenedictoXVI/test/test/GrupoEstudioTest.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GrupoEstudioControlador.java" tooltip="InstitutoBenedictoXVI/src/controlador/GrupoEstudioControlador.java">
-<persistable path="/InstitutoBenedictoXVI/src/controlador/GrupoEstudioControlador.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ModuloControlador.java" tooltip="InstitutoBenedictoXVI/src/controlador/ModuloControlador.java">
-<persistable path="/InstitutoBenedictoXVI/src/controlador/ModuloControlador.java"/>
 </file>
 </mruList>
 </workbench>

@@ -13,6 +13,5 @@ public interface DataBase {
 	public List<Usuario> tablaUsuario();
 //=======
 	public List<GrupoEstudio> tablaGrupoEstudio();
-	public List<GrupoEstudio> devolverGrupoEstudio();
 //>>>>>>> cb1229682c328efe6385376e6f065cd5f849683f
 }

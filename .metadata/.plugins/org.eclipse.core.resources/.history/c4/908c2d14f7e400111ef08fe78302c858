@@ -66,22 +66,6 @@ public void importarGrupoEstudio(String nombreArchivo) throws ParametroIncomplet
 		}
 	}
 
-	public void crearGrupoEstudio(GrupoEstudio GrupoEstudio1) throws BusinessException {
-		GrupoEstudioDAO.crearGrupoEstudio(GrupoEstudio1);
-	}
-
-	public GrupoEstudio obtenerGrupoEstudio(String CodGrupo) {
-		return GrupoEstudioDAO.obtenerGrupoEstudioPorCodigo(CodGrupo);
-	}
-
-	public void modificarGrupoEstudio(String nombre, GrupoEstudio GrupoEstudio1) {
-		GrupoEstudioDAO.modificarGrupoEstudio(nombre, GrupoEstudio1);
-	}
-
-	public void eliminarGrupoEstudio(String nombre) {
-		GrupoEstudioDAO.eliminarGrupoEstudio(nombre);
-	}
-
 	public List<GrupoEstudio> devolverListaGrupoEstudio()
 	{
 	    return GrupoEstudioDAO.devolverGrupoEstudio();

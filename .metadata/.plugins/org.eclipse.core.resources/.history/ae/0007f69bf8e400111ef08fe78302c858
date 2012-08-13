@@ -99,4 +99,21 @@ public void importarGrupoEstudio(String nombreArchivo) throws ParametroIncomplet
 		this.grupoestudioDAO.limpiaListaGrupoEstudio();
     }
 	
+	
+	//
+    // CRUD de la Habitacion
+	    
+
+	    public int devolverCantidadHabitaciones() {
+	        return habitacionDAO.devolverHabitaciones().size();
+	    }
+
+	    public List<Habitacion> devolverHabitaciones() {
+	        return habitacionDAO.devolverHabitaciones();
+	    }
+
+	    public void setBaseDatosMock(BaseDatosMock bdMock) {
+	        this.habitacionDAO.setBaseDatosMock(bdMock);
+	    }
+
 }
