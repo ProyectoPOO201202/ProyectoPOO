@@ -1,132 +1,103 @@
 package dominio;
 
+//import org.joda.time.LocalDate;
+
 //import java.util.Locale;
 
-import org.joda.time.LocalDate;
-
-
 //@SuppressWarnings("unused")
-public class Usuario {
+public class Usuario extends Trabajador{
 	
-	private String dni;
-	private String correo;
-	private String nombre;
-	private String apellidoPaterno;
-	private String apellidoMaterno;
+	//private boolean flagTerminosLeg;
 	private String cargo;
 	private String clave;
-	private boolean flagTerminosLeg;
-	private LocalDate fechaRegistro;
+	private String fechaRegistro;
 	private String rol;
-	private Academia academia;
+	//private Academia academia;
 
 	
-	public String getDni(){
-		return dni;
-	}
+	public Usuario(){
+		super("","","","","","","");
+		}
 	
-	public String setDni(String dni){
-		return this.dni;
+	public Usuario(String dni,String correo, String nombres, String apellido_paterno, String apellido_materno, String cargo, String clave, String fechaRegistro, String rol, String direccion, String telefono){
+		super(dni, correo, nombres, apellido_paterno, apellido_materno, direccion, telefono);
+		
+		setCargo(cargo);
+		setClave(clave);
+		setFechaRegistro(fechaRegistro);
+		setRol(rol);
+
 	}
-	public String getNombre(){
-		return nombre;
-	}
-	
-	public String setNombre(String nombre){
-		return this.nombre;
-	}
-	
-	public String getApellidoPaterno(){
-		return apellidoPaterno;
-	}
-	
-	public String setApellidoPaterno(String apellidoPaterno){
-		return this.apellidoPaterno;
-	}
-	
 	public String getCargo(){
 		return cargo;
 	}
-	
-	public String setCargo(String cargo){
-		return this.cargo;
+	public void setCargo(String cargo){
+		this.cargo = cargo;
 	}
-	
-	public String getCorreo() {
-		// TODO Auto-generated method stub
-		return correo;
-	}
-	public String setCorreo(String correo) {
-		return this.correo = correo;
-		
-	}
-
-	public String getClave() {
-		// TODO Auto-generated method stub
-		return clave;
-	}
-
-	public void setClave(String clave) {
-		// TODO Auto-generated method stub
-		this.clave = clave;
-		
-	}
-
-	public boolean isflagTerminosLeg() {
-		return flagTerminosLeg;
-	}
-	
-	public void setFlagTerminosLeg(boolean flagTerminosLeg) {
-		this.flagTerminosLeg = flagTerminosLeg;
-		// TODO Auto-generated method stub
-		
-	}
-
-	public LocalDate getFechaRegistro(){
+	public String getFechaRegistro(){
 		return fechaRegistro;
-		
 	}
-
-	public void setFechaRegistro(LocalDate fechaRegistro){
+	public void setFechaRegistro(String fechaRegistro){
 		this.fechaRegistro = fechaRegistro;
 	}
-
 	
-
-	public String getRol() {
-		// TODO Auto-generated method stub
+	public String getClave(){
+		return clave;
+	}
+	public void setClave(String clave){
+		this.clave = clave;
+	}
+	
+	public String getRol(){
 		return rol;
 	}
-
-	public void setRol(String rol) {
-		// TODO Auto-generated method stub
+	public void setRol(String rol){
 		this.rol = rol;
-		
+	}
+	
+	public boolean ValidaDatos(String dni, String correo, String Nombres,
+			String Apellido_Paterno, String Apellido_Materno, String direccion, String telefono) {
+boolean validado = true;
+if (dni==null) {
+	 validado = false;
+	
+}
+if (Nombres==null) {
+	 validado = false;
+	
+}
+if (Apellido_Paterno==null) {
+	 validado = false;
+	
+}
+if (Apellido_Materno==null) {
+	 validado = false;
+	
+}
+if (correo==null) {
+	 validado = false;
+	
+}
+
+if (direccion==null) {
+	 validado = false;
+	
+}
+if (telefono==null) {
+	 validado = false;
+	
+}
+
+
+		return validado;
 	}
 
-	
-	public Academia getAcademia() {
+	public String setCargo() {
 		// TODO Auto-generated method stub
-		return academia;
-	}
-	
-	public void setAcademia(Academia academia){
-		this.academia = academia;
+		return cargo;
 	}
 
-	
-	public  String getApellidoMaterno() {
-		return apellidoMaterno;
-		// TODO Auto-generated method stub
-		
-	}
-	public String setApellidoMaterno(String apellidoMaterno){
-		return this.apellidoMaterno;
-	}
 
-	
-
-	
 
 
 }

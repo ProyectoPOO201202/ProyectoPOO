@@ -4,8 +4,12 @@ import java.util.List;
 
 import dominio.Persona;
 import dominio.Prospecto;
+import dominio.Trabajador;
+import dominio.Usuario;
 
 public interface BaseDatosMock {
     public List<Prospecto> devolverProspecto();
     public List<Persona> devolverPersona();
+	public List<Usuario> devolverUsuario();
+	public List<Trabajador> devolverTrabajador();
 }
