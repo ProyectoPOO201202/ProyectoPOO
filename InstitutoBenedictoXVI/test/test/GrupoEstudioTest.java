@@ -6,8 +6,8 @@ import junit.framework.Assert;
 import org.junit.Test;
 
 import dominio.GrupoEstudio;
-import dominio.GrupoEstudio.TFiltro;
 import dominio.ParametroIncompleto;
+import dominio.Transaccion.TFiltro;
 
 public class GrupoEstudioTest {
 	
@@ -21,11 +21,9 @@ public class GrupoEstudioTest {
 
 	@Test
 	public void TestGrupoEstudioValidaDatos(){
-<<<<<<< HEAD
+
 		GrupoEstudio grupoestudio;
-=======
-		//Validacion no dar de alta un grupo si faltan datos 
->>>>>>> 2366bcbccde5adc67136a09fe77a3c649a14ba41
+
 		try {
 			grupoestudio = new GrupoEstudio( "01","ff", "Modulo1", 
 					"Aduni", "Matematicas", "01-01-2012", 
@@ -37,11 +35,11 @@ public class GrupoEstudioTest {
 		} catch (ParametroIncompleto e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-<<<<<<< HEAD
+
 		}		
-=======
-		}
+
 	}
+
 	
 	@Test
 	public void TestGrupoNuevo(){
@@ -75,7 +73,6 @@ public class GrupoEstudioTest {
 	assertEquals("201", gruponuevo1.getAula());
 	assertEquals("lon:110-lat:100", gruponuevo1.getCoordenadas());
 	assertEquals("EN_CURSO", gruponuevo1.getEstado());
->>>>>>> 2366bcbccde5adc67136a09fe77a3c649a14ba41
 	}
 	
 	@Test 

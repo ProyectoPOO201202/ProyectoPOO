@@ -11,7 +11,7 @@ public class Transaccion {
 	
 public enum Tipo {COMPRA,VENTA}
 public enum Estado {NUEVO,ANULADA,CANCELADA}	
-public enum TFiltro{CONCEPTO,NUMERO,EMPRESA,FECHAEMISION,SUBTOTAL,IGV,TOTAL,MONEDA,FECHAVENCIMIENTO,FECHAPAGO,OBSERVACIONES,TIPO,ESTADO}
+public enum TFiltro{CONCEPTO,NUMERO,EMPRESA,FECHAEMISION,SUBTOTAL,IGV,TOTAL,MONEDA,FECHAVENCIMIENTO,FECHAPAGO,OBSERVACIONES,TIPO,ESTADO,NOMBREGRUPO}
 
 public Transaccion(String concepto, int numero, DateTime fechaEmision2,
 			String empresa, double subtotal, double igv, double total,

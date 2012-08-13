@@ -2,12 +2,6 @@ package dominio.DAO;
 
 import java.util.ArrayList;
 import java.util.List;
-
-<<<<<<< HEAD
-=======
-//import org.joda.time.LocalDate;
-
->>>>>>> 2366bcbccde5adc67136a09fe77a3c649a14ba41
 import dominio.Persona;
 import dominio.Prospecto;
 import dominio.DAO.BaseDatosMock;

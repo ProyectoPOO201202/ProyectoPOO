@@ -7,7 +7,7 @@ import dominio.Rol;
 
 public class RolTest {
 	
-	Rol prueba = new Rol(0, null, 0, 0, 0, 0, null);	
+	Rol prueba = new Rol();	
 	
 	//@Test
 	public void crearRolTest() {		

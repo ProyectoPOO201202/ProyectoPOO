@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import dominio.Transaccion.TFiltro;
+
 public class GrupoEstudio {
 	
 
@@ -20,35 +22,8 @@ public class GrupoEstudio {
 		 private String Local;
 		 private String Aula;
 		 private String Coordenadas;
-		 private String Estado;
-		 
-<<<<<<< HEAD
-		
-		public GrupoEstudio(String codGrupo, String nombregrupo,
-				String descripcion, String academia, String curso,
-				String fechainicio, String fechafin, String instructor,
-				String link, String local, String aula, String coordenadas,
-				String estado) throws ParametroIncompleto {
-			super();
-			
-			if (codGrupo.equals("")){
-				throw new ParametroIncompleto("codigo de grupo");
-			}
-			else if (nombregrupo.equals("")){
-				throw new ParametroIncompleto("nombre de grupo");
-			}	
-			else if (fechainicio.equals("")){
-				throw new ParametroIncompleto("fecha de inicio");
-			}	
-			else if (fechafin.equals("")){
-					throw new ParametroIncompleto("fecha de fin");
-			}
-			
-=======
-		 
-		   public GrupoEstudio(String string, String string2, String string3, String string4, String string5, String string6, dominio.GrupoEstudio.Estado enCurso) {    }
-		   public enum Estado {EN_CURSO,FINALIZADO,ANULADO}
-		   public enum TFiltro{NOMBREGRUPO,ACADEMIA,GRUPO,FECHAINICIO,FECHAFIN,ESTADO}
+		 private String Estado;		 
+
 
 		 public GrupoEstudio(String codGrupo, String nombregrupo,
 					String descripcion, String academia, String curso,
@@ -70,7 +45,6 @@ public class GrupoEstudio {
 						throw new ParametroIncompleto("fecha de fin");
 				} 		 
 		 
->>>>>>> 2366bcbccde5adc67136a09fe77a3c649a14ba41
 			CodGrupo = codGrupo;
 			Nombregrupo = nombregrupo;
 			Descripcion = descripcion;
@@ -86,13 +60,11 @@ public class GrupoEstudio {
 			Estado = estado;
 			
 		}
-<<<<<<< HEAD
-		
-=======
+
 		public GrupoEstudio() {
 			// TODO Auto-generated constructor stub
 		}
->>>>>>> 2366bcbccde5adc67136a09fe77a3c649a14ba41
+
 		public String getCodGrupo() {
 			return CodGrupo;
 		}
