@@ -22,7 +22,20 @@ private RolDAO rolDAO = new RolDAO();
 		return rol;
 	}
 	
-public void importarRol(String nombreArchivo){		
+	 public Rol modificarRol(String codigo, String descripcion, boolean acceso,boolean adicionar,boolean editar,boolean eliminar)
+	 {
+	    	Rol encontrado = busquedaRolCodigo(codigo);
+	    	encontrado.setDescripcion(descripcion);
+			encontrado = busquedaRolCodigo(codigo);
+			encontrado.setAcceso(acceso);
+			encontrado.setAdicionar(adicionar);
+			encontrado.setEditar(editar);
+			encontrado.setEliminar(eliminar);	
+			return encontrado;
+		}
+	    
+	
+	public void importarRol(String nombreArchivo){		
 		try {			
 			CsvReader rol = new CsvReader(nombreArchivo);		
 			rol.readHeaders();
@@ -41,6 +54,20 @@ public void importarRol(String nombreArchivo){
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}	
+	
+	public Rol busquedaRolCodigo(String codigo)
+	{
+		Rol retorno;
+		retorno = rolDAO.obtenerRolPorCodigo(codigo);
+		return retorno;		
+	}
+	
+	public List<Rol> busquedaRolDescripcion(String descripcion)
+	{
+		List<Rol> listaRol;
+		listaRol = rolDAO.devolverListaBusquedaRolDescripcion(descripcion);
+		return listaRol;		
 	}
 
 	public List<Rol> devolverListaRol()
@@ -59,5 +86,29 @@ public void importarRol(String nombreArchivo){
 	public void limpiaListaRol() {
 		this.rolDAO.limpiaListaRol();
     }
+	
+	public Rol modificaAccesoRol(String codigo,boolean acceso,boolean adicionar,boolean editar,boolean eliminar)
+	{
+		Rol encontrado = new Rol();
+		encontrado = busquedaRolCodigo(codigo);
+		encontrado.setAcceso(acceso);
+		encontrado.setAdicionar(adicionar);
+		encontrado.setEditar(editar);
+		encontrado.setEliminar(eliminar);	
+		return encontrado;
+	}
+
+	public boolean eliminarRol(String codigo) {
+		
+		boolean resultado = false;
+		try {		
+			rolDAO.eliminarRol(codigo);
+			resultado = true;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block			
+			e.printStackTrace();
+		}
+		return resultado;
+	}
 
 }

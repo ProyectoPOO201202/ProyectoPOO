@@ -7,10 +7,6 @@ import static org.mockito.Mockito.mock;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-<<<<<<< HEAD
-
-=======
->>>>>>> 2366bcbccde5adc67136a09fe77a3c649a14ba41
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,13 +15,6 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import com.csvreader.CsvReader;
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 2366bcbccde5adc67136a09fe77a3c649a14ba41
 import controlador.PersonaControlador;
 
 
