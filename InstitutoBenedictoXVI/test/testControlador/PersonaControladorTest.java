@@ -56,7 +56,7 @@ public class PersonaControladorTest {
 		 doReturn(listaProspecto).when(bdMock).devolverProspecto();		
 		 
 		 
-			// REGISTRA 15 PROSPECTO
+			// REGISTRA 15 PROSPECTOS
 			for(int i=10001; i<=10015; i++){
 				personaControlador.registrarProspecto("dni" +i, "nombres" + i, "apellido_paterno" + i, "apellido_materno" + i, "485" + i, "100212" + i, "correo@upc.com" + i, "direccion" +i, "distrito" + i, "departamento" + i) ;  
 				
@@ -94,7 +94,6 @@ public class PersonaControladorTest {
 		"distrito10001", "departamento10001");
 		
 		Prospecto prospecto= personaControlador.obtenerProspectoPorDni("dni10001");
-		// ASSERTS
 		assertEquals("dni10001", prospecto.getDni());
 		assertEquals("TITO10001", prospecto.getNombres());
 		assertEquals("apellido_paterno10001", prospecto.getApellido_Paterno());
@@ -120,13 +119,7 @@ public class PersonaControladorTest {
 		System.out.println("Resultado busqueda de prospectos : " + prospectos.size() + " coincidencias");		
 		assertEquals("apellido_paterno10001", prospectos.get(0).getApellido_Paterno());
 		//assertEquals("apellido_paterno10002", prospectos.get(1).getApellido_Paterno());
-		/*assertEquals("E10003", empresas.get(2).getCodigo());
-		assertEquals("E10004", empresas.get(3).getCodigo());
-		assertEquals("E10005", empresas.get(4).getCodigo());
-		assertEquals("E10006", empresas.get(5).getCodigo());
-		assertEquals("E10007", empresas.get(6).getCodigo());
-		assertEquals("E10008", empresas.get(7).getCodigo());
-		assertEquals("E10009", empresas.get(8).getCodigo());	*/
+	
 	}
 
 
@@ -134,11 +127,9 @@ public class PersonaControladorTest {
 	public void testEliminarProspecto(){
 				
 		personaControlador.eliminarProspecto("dni10001");		
-		//clienteControlador.eliminarEmpresa("E10005");
-		//clienteControlador.eliminarEmpresa("E10015");
+		
 		assertNull(personaControlador.obtenerProspectoPorDni("dni10001"));
-		//assertNull(clienteControlador.obtenerEmpresaPorCodigo("E10005"));		
-		//assertNull(clienteControlador.obtenerEmpresaPorCodigo("E10015"));		
+	
 		assertEquals(14, personaControlador.devolverCantidadProspecto());
 	}
 

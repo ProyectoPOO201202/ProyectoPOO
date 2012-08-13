@@ -1,0 +1,87 @@
+package test;
+
+
+import static org.junit.Assert.assertEquals;
+import junit.framework.Assert;
+
+import org.junit.Test;
+
+import dominio.Cliente;
+import dominio.GrupoEstudio;
+import dominio.ParametroIncompleto;
+import dominio.RegistroDuplicado;
+
+public class GrupoEstudioTest {
+	
+	@Test
+	public void TestGrupoEstudioValidaDatos(){
+		//Validacion no dar de alta un grupo si faltan datos 
+		try {
+			GrupoEstudio  grupoestudio=new GrupoEstudio( "01","ff", "Modulo1", 
+					"Aduni", "Matematicas", "01-01-2012", 
+					"30-02-2012", "Juan Perez", "http:\\linkestudios", 
+					"La Marina", "322", "xxxx","EN_CURSO");
+			String codGrupo = grupoestudio.getCodGrupo();
+			Assert.assertEquals("01", codGrupo);
+			
+		} catch (ParametroIncompleto e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	public void TestGrupoNuevo(){
+			
+	GrupoEstudio gruponuevo1 = new GrupoEstudio();
+	
+	gruponuevo1.setCodGrupo("01");
+	gruponuevo1.setNombregrupo("Programacion");
+	gruponuevo1.setDescripcion("Programacion Orientada a Objetos");
+	gruponuevo1.setAcademia("El Buen Pastor");
+	gruponuevo1.setCurso("Java");
+	gruponuevo1.setFechainicio("01-08-2012");
+	gruponuevo1.setFechafin("30-09-2012");
+	gruponuevo1.setInstructor("Miguel Fernandez");
+	gruponuevo1.setLink("http://www.lawebdelprogramador.com/");
+	gruponuevo1.setLocal("Miraflores");
+	gruponuevo1.setAula("201");
+	gruponuevo1.setCoordenadas("lon:110-lat:100");
+	gruponuevo1.setEstado("EN_CURSO");
+	
+	assertEquals("01", gruponuevo1.getCodGrupo());
+	assertEquals("Programacion", gruponuevo1.getNombregrupo());
+	assertEquals("Programacion Orientada a Objetos", gruponuevo1.getDescripcion());
+	assertEquals("El Buen Pastor", gruponuevo1.getAcademia());
+	assertEquals("Java", gruponuevo1.getCurso());
+	assertEquals("01-08-2012", gruponuevo1.getFechainicio());
+	assertEquals("30-09-2012", gruponuevo1.getFechafin());
+	assertEquals("Miguel Fernandez", gruponuevo1.getInstructor());
+	assertEquals("http://www.lawebdelprogramador.com/", gruponuevo1.getLink());
+	assertEquals("Miraflores", gruponuevo1.getLocal());
+	assertEquals("201", gruponuevo1.getAula());
+	assertEquals("lon:110-lat:100", gruponuevo1.getCoordenadas());
+	assertEquals("EN_CURSO", gruponuevo1.getEstado());
+	}
+	
+	
+   /* public GrupoEstudio buscar(String nombregrupo) {
+        // Buscar el tipo de grupo por nombre
+        for(GrupoEstudio tipo : grupos)
+            if (tipo.getNombregrupo().equals(nombregrupo))
+               return tipo;
+        return null;
+    }	*/
+	@Test
+    @SuppressWarnings("unused")
+	private void ValidaDuplicidad(final String nombregrupo) 
+    	// Valida registros duplicados por nombre
+            throws RegistroDuplicado {
+        if (buscar(nombregrupo) != null){
+            String mensaje = "Nombre Grupo "+ nombregrupo + " Ya esta registrado.";
+            throw new RegistroDuplicado(mensaje);
+        }
+    }
+
+
+}

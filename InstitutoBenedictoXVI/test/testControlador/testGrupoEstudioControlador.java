@@ -79,7 +79,7 @@ public class testGrupoEstudioControlador {
 			
 			int contador = 0;
 			
-			CsvReader proveedor3 = new CsvReader("test/csv/grupoestudio_import.csv");	
+			CsvReader proveedor3 = new CsvReader("test/csv/GrupoEstudio_import.csv");	
 			proveedor3.readHeaders();
 			
 			while (proveedor3.readRecord()){	
