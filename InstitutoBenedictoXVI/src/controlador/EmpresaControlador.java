@@ -21,6 +21,13 @@ public class EmpresaControlador {
 		return proveedor;
 	}
 	
+	public Empresa modificarEmpresa(String codigo, String razon_social, String rubro, String direccion, String correo, String telefono, String ciudad, 
+    		String pais, String estado, String observaciones){
+		Empresa proveedor = new Empresa(codigo, razon_social, rubro, direccion, correo, telefono, ciudad, pais, estado, observaciones);		
+		empresaDAO.modificarEmpresa(codigo, razon_social, rubro, direccion, correo, telefono, ciudad, pais, estado, observaciones);
+		return proveedor;
+	}
+	
 public void importarEmpresas(String nombreArchivo){
 		
 		try {
