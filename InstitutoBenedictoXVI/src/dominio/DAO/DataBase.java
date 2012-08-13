@@ -10,9 +10,10 @@ public interface DataBase {
 	public List<Modulo> tablaModulo();
 	public List<Rol> tablaRol();
 //<<<<<<< HEAD
-	public List<Usuario> tablaUsuario();
+	public int tablaUsuario();
 //=======
 	public List<GrupoEstudio> tablaGrupoEstudio();
 	public List<GrupoEstudio> devolverGrupoEstudio();
 //>>>>>>> cb1229682c328efe6385376e6f065cd5f849683f
+	public List<Usuario> devolverUsuario();
 }

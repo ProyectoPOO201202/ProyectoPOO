@@ -5,50 +5,50 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-import org.joda.time.LocalDate;
-
-
+//import org.joda.time.LocalDate;
 import dominio.Usuario;
 
 
 public class TrabajadorDAO {
 	
- private DataBase bdMock;
- public void setBaseDatosMock(DataBase bdMock) {
+ private BaseDatosMock bdMock;
+ 
+ public void setBaseDatosMock(BaseDatosMock bdMock) {
      this.bdMock = bdMock;
  }
- public void crear(Usuario usuario) {
-     bdMock.tablaUsuario().add(usuario);
+ public void crearUsuario(Usuario usuario) {
+     bdMock.devolverUsuario().add(usuario);
  }
- public void modificarUsuario(String dni, String nombre, String apellidoPaterno,
-			String apellidoMaterno, String cargo, String correo, String clave,
-			String rol, String academia, LocalDate fecharegistro, boolean flag){
+ public void modificarUsuario(String dni, String correo, String nombres, String apellido_paterno,
+			String apellido_materno, String cargo, String clave, String fecharegistro,
+			String rol, String direccion, String telefono){
  	
  	Usuario usuario = obtenerUsuarioPorDni(dni);
 		usuario.setDni(dni);
-		usuario.setNombre(nombre);
-		usuario.setApellidoPaterno(apellidoPaterno);
-		usuario.setApellidoMaterno(apellidoMaterno);
+		usuario.setCorreo(correo);
+		usuario.setNombres(nombres);
+		usuario.setApellido_Paterno(apellido_paterno);
+		usuario.setApellido_Paterno(apellido_paterno);
 		usuario.setCargo(cargo);
-		usuario.setCorreo(correo);	
-		usuario.setRol(rol);
 		usuario.setFechaRegistro(fecharegistro);
-		usuario.setFlagTerminosLeg(flag);
+		usuario.setRol(rol);
+		usuario.setDireccion(direccion);
+		usuario.setTelefono(telefono);
 			
 		
 	}
  
- public List<Usuario> devolverListaBusquedaUsusarioPorApellido(String apellidoPaterno){
+ public ArrayList<Usuario> devolverListaBusquedaUsuarioPorApellido(String apellido_paterno){
 	 List<Usuario> resultadoBusquedaUsuario = new ArrayList<Usuario>();
 	 
 	 for (int i = 0; i < devolverCantidadUsuario(); i++){
 	 	Usuario u = devolverUsuario().get(i);
 	 	
-	 	if(u.getApellidoPaterno().indexOf(apellidoPaterno) > -1){
+	 	if(u.getApellido_Paterno().indexOf(apellido_paterno) > -1){
 	 		resultadoBusquedaUsuario.add(u);
 	 	}
 	 }
-	 return resultadoBusquedaUsuario;
+	 return (ArrayList<Usuario>) resultadoBusquedaUsuario;
  }
 
  public void eliminarUsuario(String dni){
@@ -70,7 +70,7 @@ public Usuario obtenerUsuarioPorDni(String dni) {
 		}
 	}
 	// TODO Auto-generated method stub
-	return null;
+	return usuario;
 }
 public int devolverCantidadUsuario() {
 	// TODO Auto-generated method stub
@@ -78,10 +78,9 @@ public int devolverCantidadUsuario() {
 }
 
 public List<Usuario> devolverUsuario() {
-	// TODO Auto-generated method stub
-	return bdMock.tablaUsuario();
+    return bdMock.devolverUsuario();
 }
 public void limpiarListaUsuario(){
-	bdMock.tablaUsuario().clear();
+	bdMock.devolverUsuario().clear();
 }
 }
