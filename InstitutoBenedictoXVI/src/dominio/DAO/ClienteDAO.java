@@ -39,8 +39,8 @@ public class ClienteDAO {
     	
 	public ArrayList<Cliente> devolverListaBusquedaClientePorApellidos(String apellidos){
         
-		ArrayList<Cliente> resultadoBusquedaCliente= new ArrayList<Cliente>();
-		
+		ArrayList<Cliente> resultadoBusquedaCliente	= new ArrayList<Cliente>();
+	
 		for(int i = 0; i < devolverCantidadCliente(); i++){            
         	Cliente c = devolverCliente().get(i);          
         
@@ -48,6 +48,7 @@ public class ClienteDAO {
         		resultadoBusquedaCliente.add(c);
             }
         }		
+		
 		return resultadoBusquedaCliente;
     }
     

@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
+import org.junit.Assert;
 
 import com.csvreader.CsvReader;
 import com.csvreader.CsvWriter;
@@ -29,8 +30,14 @@ public class ClienteControlador {
     /* METODOS REFERENTES a PROSPECTO */
     
     
-    public Cliente registrarCliente(String codigocliente,String dni,String nombres, String apellido_paterno, String apellido_materno, String telefono, String fechacontacto, String correo, String direccion, String distrito, String departamento){
-		Cliente cliente	= new Cliente(codigocliente,dni,nombres, apellido_paterno, apellido_materno, telefono, fechacontacto,correo, direccion, distrito,departamento);
+    
+    public Cliente registrarCliente(String codigocliente,String dni,String nombres, String apellido_paterno, String apellido_materno, String telefono,String celular, String fechacontacto, String correo, String direccion, String distrito, String departamento){
+		
+    	Assert.assertNotNull("Ingrese Nombre",nombres);
+		Assert.assertNotNull("Ingrese apellido Paterno",apellido_paterno);
+		Assert.assertNotNull("Ingrese Email",correo);
+		
+    	Cliente cliente	= new Cliente(codigocliente,dni,nombres, apellido_paterno, apellido_materno, telefono,celular, fechacontacto,correo, direccion, distrito,departamento);
 		clienteDAO.crearCliente(cliente);
 		return cliente;
 	}
@@ -99,6 +106,7 @@ public void importarCliente(String nombreArchivo){
 	
 	try {
 		
+		
 		CsvReader cliente = new CsvReader(nombreArchivo);
 	
 		cliente.readHeaders();
@@ -111,14 +119,15 @@ public void importarCliente(String nombreArchivo){
 			String apellido_paterno= cliente.get(3);
 			String apellido_materno= cliente.get(4);
 			String telefono = cliente.get(5);
-			String fechacontacto = cliente.get(6);
-			String correo = cliente.get(7);
-			String direccion = cliente.get(8);
-			String distrito = cliente.get(9);
-			String departamento = cliente.get(10);
+			String celular = cliente.get(6);
+			String fechacontacto = cliente.get(7);
+			String correo = cliente.get(8);
+			String direccion = cliente.get(9);
+			String distrito = cliente.get(10);
+			String departamento = cliente.get(11);
 						
 			// perform program logic here
-			registrarCliente(codigocliente, dni, nombres, apellido_paterno, apellido_materno, telefono, fechacontacto, correo, direccion, distrito, departamento);
+			registrarCliente(codigocliente, dni, nombres, apellido_paterno, apellido_materno, telefono,celular, fechacontacto, correo, direccion, distrito, departamento);
 		
 		}
 
@@ -132,14 +141,17 @@ public void importarCliente(String nombreArchivo){
 }
 
     public ArrayList<Cliente> devolverListaBusquedaClientePorApellidos(String apellidos){
+    	Assert.assertEquals("No se encontraron registros para los filtros ingresados","1",String.valueOf(clienteDAO.devolverListaBusquedaClientePorApellidos(apellidos).size()));
     	return clienteDAO.devolverListaBusquedaClientePorApellidos(apellidos);
     }
     
-    public void eliminarCliente(String dni){
-    	clienteDAO.eliminarCliente(dni);
+    public void eliminarCliente(String codigo){
+    	clienteDAO.eliminarCliente(codigo);
 	}
 	
     public Cliente obtenerClientePorCodigo(String codigocliente){
+
+    	Assert.assertNotNull("No se encontraron registros para los filtros ingresados", clienteDAO.obtenerClientePorCodigo(codigocliente));
 		return clienteDAO.obtenerClientePorCodigo(codigocliente);
 	}
     

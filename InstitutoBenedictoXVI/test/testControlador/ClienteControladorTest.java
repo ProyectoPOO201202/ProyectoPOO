@@ -11,6 +11,8 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+import junit.framework.Assert;
+
 import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 import org.junit.Before;
@@ -65,46 +67,58 @@ public class ClienteControladorTest {
 		 
 			// REGISTRA 15 CLIENTES
 			for(int i=10001; i<=10015; i++){
-				clientecontrolador.registrarCliente("cod"+i,"dni" +i, "nombres" + i, "apellido_paterno" + i, "apellido_materno" + i, "485" + i, "100212" + i, "correo@upc.com" + i, "direccion" +i, "distrito" + i, "departamento" + i) ;  
+				clientecontrolador.registrarCliente("cod"+i,"dni" +i, "nombres" + i, "apellido_paterno" + i, "apellido_materno" + i, "485" + i,"9987"+i, "100212" + i, "correo@upc.com" + i, "direccion" +i, "distrito" + i, "departamento" + i) ;  
 				
 			}
 		 
 	}	    
 		    
 
-	@Test
+//@Test
+//Lista de todos los clientes
 	public void testListarClienteRegistradas(){
 		
 		List<Cliente> cliente = new ArrayList<Cliente>();
 		cliente = clientecontrolador.devolverListaCliente();
 		for(Cliente clientes : cliente){
-			System.out.println(clientes.getCodigoCliente() + " " + clientes.getApellido_Paterno());
+			System.out.println(clientes.getCodigoCliente() + "   "+ clientes.getNombres() +"   " + clientes.getApellido_Paterno()
+					+"   "+clientes.getApellido_Materno()+"   "+clientes.getCorreo()+"   "+
+					clientes.getDni()+"   "+clientes.getTelefono()+"   "+clientes.getCelular());
 		}
 		System.out.println("Total de Prospecto registradas : " + clientecontrolador.devolverCantidadCliente());
 		assertEquals(15, clientecontrolador.devolverCantidadCliente());
 	}
+
+//@Test
+public void testDardeAltaCliente(){
+	clientecontrolador.registrarCliente("cod10016", "", "Joel", "Pacheco", "", "", "", "", "joel@gmail.com", "", "", "");
+	System.out.print("Registro guardado");
+}
 	
-	
-	@Test
-	public void testMostrarDatosProspecto(){
-				Cliente cliente = clientecontrolador.obtenerClientePorCodigo("dni10002");
-		assertEquals("dni10002", cliente.getDni());
-		assertEquals("nombres10002",cliente.getNombres());
-			
+	//@Test
+	//Busqueda de cliente por codigo
+	public void testMostrarDatosCliente(){
+		Cliente cliente = clientecontrolador.obtenerClientePorCodigo("cod10014");
+		assertEquals("dni10014", cliente.getDni());
+		assertEquals("nombres10014",cliente.getNombres());
+		System.out.println(cliente.getCodigoCliente() + "   "+ cliente.getNombres() +"   " + cliente.getApellido_Paterno()
+				+"   "+cliente.getApellido_Materno()+"   "+cliente.getCorreo()+"   "+
+				cliente.getDni()+"   "+cliente.getTelefono()+"   "+cliente.getCelular());
+		
 	}	
-	
-	@Test
+	//cod10014   apellido_paterno10014   apellido_materno10014   correo@upc.com10014   dni10014   48510014   998710014
+	//@Test
 	public void testModificarDatosCliente(){
 		
-		clientecontrolador.modificarCliente("cod10001","dni10001", "TITO10001", "apellido_paterno10001",
+		clientecontrolador.modificarCliente("cod10001","dni10001", "JOEL10001", "apellido_paterno10001",
 		"apellido_materno10001", "4984859", "100212", "correo@upc.com", "direccion10001",
 		"distrito10001", "departamento10001");
 		
-		Cliente cliente = clientecontrolador.obtenerClientePorCodigo("dni10001");
+		Cliente cliente = clientecontrolador.obtenerClientePorCodigo("cod10001");
 		// ASSERTS
 		assertEquals("cod10001",cliente.getCodigoCliente());
 		assertEquals("dni10001", cliente.getDni());
-		assertEquals("TITO10001", cliente.getNombres());
+		assertEquals("JOEL10001", cliente.getNombres());
 		assertEquals("apellido_paterno10001", cliente.getApellido_Paterno());
 		assertEquals("apellido_materno10001", cliente.getApellido_Materno());
 		assertEquals("4984859", cliente.getTelefono());
@@ -116,17 +130,20 @@ public class ClienteControladorTest {
 	
 	}
 	
-	@Test
-	public void testBuscarProspecto(){
+	//@Test
+	public void testBuscarCliente(){
 		
 		ArrayList<Cliente> cliente = new ArrayList<Cliente>();
-		cliente = clientecontrolador.devolverListaBusquedaClientePorApellidos("apellido_paterno10001");
+		cliente = clientecontrolador.devolverListaBusquedaClientePorApellidos("apellido_paterno10011");
 				
 		for(Cliente clientes: cliente){
-			System.out.println(clientes.getApellido_Paterno()+ " " + clientes.getDni());
+			System.out.println(clientes.getCodigoCliente() + "   "+ clientes.getNombres() +"   " + clientes.getApellido_Paterno()
+					+"   "+clientes.getApellido_Materno()+"   "+clientes.getCorreo()+"   "+
+					clientes.getDni()+"   "+clientes.getTelefono()+"   "+clientes.getCelular());
 		}
-		System.out.println("Resultado busqueda de clientes : " + cliente.size() + " coincidencias");		
-		assertEquals("apellido_paterno10001", cliente.get(0).getApellido_Paterno());
+		System.out.println("Resultado busqueda de clientes : " + cliente.size() + " coincidencias");
+	
+		assertEquals("apellido_paterno10011", cliente.get(0).getApellido_Paterno());
 		//assertEquals("apellido_paterno10002", prospectos.get(1).getApellido_Paterno());
 		/*assertEquals("E10003", empresas.get(2).getCodigo());
 		assertEquals("E10004", empresas.get(3).getCodigo());
@@ -141,18 +158,20 @@ public class ClienteControladorTest {
 	@Test
 	public void testEliminarCliente(){
 				
-		clientecontrolador.eliminarCliente("dni10001");		
+		clientecontrolador.eliminarCliente("cod10001");
+		//testListarClienteRegistradas();
 		//clienteControlador.eliminarEmpresa("E10005");
 		//clienteControlador.eliminarEmpresa("E10015");
-		assertNull(clientecontrolador.obtenerClientePorCodigo("cod10001"));
+		//assertNull(clientecontrolador.obtenerClientePorCodigo("cod10001"));
 		//assertNull(clienteControlador.obtenerEmpresaPorCodigo("E10005"));		
 		//assertNull(clienteControlador.obtenerEmpresaPorCodigo("E10015"));		
 		assertEquals(14, clientecontrolador.devolverCantidadCliente());
+		//assertNull(clientecontrolador.obtenerClientePorCodigo("cod10001"));
 	}
 
 
 
-	@Test
+	//@Test
 	public void testExportarCliente(){
 		
 		clientecontrolador.exportarCliente("test/csv/Cliente_export.csv");
@@ -192,7 +211,7 @@ public class ClienteControladorTest {
 	}
 		
 
-	@Test
+	//@Test
 	public void testImportarCliente(){
 		
 		clientecontrolador.limpiaListaCliente();
