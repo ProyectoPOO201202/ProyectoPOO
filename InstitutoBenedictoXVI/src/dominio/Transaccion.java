@@ -1,8 +1,6 @@
 package dominio;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+
 
 import org.joda.time.DateTime;
 
@@ -10,8 +8,7 @@ import org.joda.time.DateTime;
 public class Transaccion {
 	
 public enum Tipo {COMPRA,VENTA}
-public enum Estado {NUEVO,ANULADA,CANCELADA}	
-public enum TFiltro{CONCEPTO,NUMERO,EMPRESA,FECHAEMISION,SUBTOTAL,IGV,TOTAL,MONEDA,FECHAVENCIMIENTO,FECHAPAGO,OBSERVACIONES,TIPO,ESTADO,NOMBREGRUPO}
+public enum Estado {NUEVO,ANULADA,CANCELADA}
 
 public Transaccion(String concepto, int numero, DateTime fechaEmision2,
 			String empresa, double subtotal, double igv, double total,
@@ -75,30 +72,7 @@ public Transaccion(String concepto, int numero, DateTime fechaEmision2,
 	private DateTime fechaPago;
 	private String observaciones;
 	private Tipo tipo;	
-	private Estado estado;
-	
-	private List<Filtro> filtro = new ArrayList<Filtro>();
-	
-	public boolean addFiltro(TFiltro tipoFiltro, String valor)
-	{
-		Filtro cargador = new Filtro(tipoFiltro.toString(),valor);
-		filtro.add(cargador);
-		return true;		
-	}
-	
-	public int listaFiltro()
-	{
-		Filtro contenedor;
-		int contador = 0;
-		Iterator<Filtro> iterador = filtro.iterator();
-		while (iterador.hasNext())
-		{	
-			contenedor = iterador.next();
-			System.out.println(contenedor.getCodigo() + " " + contenedor.getValor() );
-			contador++;
-		}
-		return contador;
-	}
+	private Estado estado;	
 	
 	public String getConcepto() {
 		return concepto;

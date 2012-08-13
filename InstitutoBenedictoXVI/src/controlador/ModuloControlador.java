@@ -32,9 +32,7 @@ public void importarModulo(String nombreArchivo){
 			while (modulo.readRecord()){
 			
 				String codigo = modulo.get(0);				
-				String descripcion = modulo.get(1);				
-								
-			
+				String descripcion = modulo.get(1);		
 				registrarModulo(codigo, descripcion);
 			}
 	
@@ -52,7 +50,7 @@ public void importarModulo(String nombreArchivo){
 	    return moduloDAO.devolverModulo();
 	}
 	
-	public int cantidadEmpresas(){
+	public int cantidadModulo(){
         return moduloDAO.cantidadModulo();
     }
 	

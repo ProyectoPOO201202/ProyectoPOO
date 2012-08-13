@@ -28,6 +28,19 @@ public class EmpresaControlador {
 		return proveedor;
 	}
 	
+public boolean eliminarEmpresa(String codigo) {
+		
+		boolean resultado = false;
+		try {		
+			empresaDAO.eliminarEmpresa(codigo);
+			resultado = true;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block			
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+	
 public void importarEmpresas(String nombreArchivo){
 		
 		try {
@@ -78,5 +91,10 @@ public void importarEmpresas(String nombreArchivo){
 	public void limpiaListaEmpresa() {
 		this.empresaDAO.limpiaListaEmpresa();
     }
+	
+	public Empresa buscaEmpresaPorCodigo(String codigo)
+	{
+		return this.empresaDAO.obtenerEmpresaPorCodigo(codigo);
+	}
 
 }
