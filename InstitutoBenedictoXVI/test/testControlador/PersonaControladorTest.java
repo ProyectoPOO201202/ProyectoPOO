@@ -1,6 +1,6 @@
 package testControlador;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+//import static org.junit.Assert.assertNull;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 
@@ -62,7 +62,7 @@ public class PersonaControladorTest {
 		 
 	}	    
 		    
-	/*
+	
 	@Test
 	public void testListarProspectoRegistradas(){
 		
@@ -75,7 +75,7 @@ public class PersonaControladorTest {
 		assertEquals(15, personaControlador.devolverCantidadProspecto());
 	}
 	
-	
+	/*
 	@Test
 	public void testMostrarDatosProspecto(){
 				Prospecto prospecto = personaControlador.obtenerProspectoPorDni("dni10005");
@@ -168,43 +168,5 @@ public class PersonaControladorTest {
 	}
 		
 */
-	@Test
-	public void testImportarProspecto(){
-		
-		personaControlador.limpiaListaProspecto();
-		personaControlador.importarProspecto("test/csv/Prospecto_import.csv");
-		
-		try {
-					
-			List<Prospecto> prospecto1 = new ArrayList<Prospecto>();
-			prospecto1 = personaControlador.devolverListaProspecto();
-			
-			int contador = 0;
-			
-			CsvReader prospecto2 = new CsvReader("test/csv/Prospecto_import.csv");	
-			prospecto2.readHeaders();
-			
-			while (prospecto2.readRecord()){	
-				
-				assertEquals(prospecto1.get(contador).getDni(), prospecto2.get(0));
-				assertEquals(prospecto1.get(contador).getNombres(), prospecto2.get(1));
-				assertEquals(prospecto1.get(contador).getApellido_Paterno(), prospecto2.get(2));
-				assertEquals(prospecto1.get(contador).getApellido_Materno(), prospecto2.get(3));
-			
-				
-			
-				contador++;
-			}
 	
-			prospecto2.close();
-			
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-	
-	
-
 }
