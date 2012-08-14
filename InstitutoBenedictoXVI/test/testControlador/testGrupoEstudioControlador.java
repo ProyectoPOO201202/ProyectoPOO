@@ -6,7 +6,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
+import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.mock;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,6 +15,7 @@ import controlador.GrupoEstudioControlador;
 import dominio.GrupoEstudio;
 import dominio.ParametroIncompleto;
 import dominio.DAO.DataBase;
+import com.csvreader.CsvReader;
 
 public class testGrupoEstudioControlador {
 	private DataBase bdMock;
@@ -38,7 +40,7 @@ public class testGrupoEstudioControlador {
 	}
 
 
-	//@Test
+	@Test
 	public void testListarGrupoEstudioRegistradas(){
 		
 		List<GrupoEstudio> grupoestudio = new ArrayList<GrupoEstudio>();
