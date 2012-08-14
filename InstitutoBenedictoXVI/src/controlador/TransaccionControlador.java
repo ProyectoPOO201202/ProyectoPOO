@@ -2,6 +2,8 @@ package controlador;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import org.joda.time.DateTime;
@@ -135,5 +137,30 @@ private TransaccionDAO transaccionDAO = new TransaccionDAO();
 		}
 		return resultado;
 	}
+	
+	public enum TFiltro{CONCEPTO,NUMERO,EMPRESA,FECHAEMISION,SUBTOTAL,IGV,TOTAL,MONEDA,FECHAVENCIMIENTO,FECHAPAGO,OBSERVACIONES,TIPO,ESTADO,NOMBREGRUPO}
+	private List<Filtro> filtro = new ArrayList<Filtro>();
+
+	public boolean addFiltro(TFiltro tipoFiltro, String valor)
+	{
+		Filtro cargador = new Filtro(tipoFiltro.toString(),valor);
+		filtro.add(cargador);
+		return true;		
+	}
+
+	public int listaFiltro()
+	{
+		Filtro contenedor;
+		int contador = 0;
+		Iterator<Filtro> iterador = filtro.iterator();
+		while (iterador.hasNext())
+		{	
+			contenedor = iterador.next();
+			System.out.println(contenedor.getCodigo() + " " + contenedor.getValor() );
+			contador++;
+		}
+		return contador;
+	}
+
 
 }

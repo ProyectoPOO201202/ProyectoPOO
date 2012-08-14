@@ -1,4 +1,4 @@
-package dominio;
+package testControlador;
 
 public class Filtro {
 	

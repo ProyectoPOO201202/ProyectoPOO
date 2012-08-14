@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import controlador.Filtro;
+
 import dominio.Transaccion.TFiltro;
 
 public class GrupoEstudio {
