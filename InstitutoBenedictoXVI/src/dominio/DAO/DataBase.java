@@ -10,6 +10,7 @@ public interface DataBase {
 	public List<Modulo> tablaModulo();
 	public List<Rol> tablaRol();
 	public List<Transaccion> tablaTransaccion();
+	public List<Transaccion> tablaFiltro();
 	
 	public List<Usuario> tablaUsuario();
 	public List<GrupoEstudio> tablaGrupoEstudio();

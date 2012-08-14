@@ -108,6 +108,11 @@ private TransaccionDAO transaccionDAO = new TransaccionDAO();
 	    return transaccionDAO.devolverTransaccion();
 	}
 	
+	public List<Transaccion> devolverListaTransaccionFiltro()
+	{
+	    return transaccionDAO.devolverTransaccionFiltro(filtro);
+	}	
+	
 	public int cantidadTransaccion(){
         return transaccionDAO.cantidadTransaccion();
     }
@@ -157,122 +162,6 @@ private TransaccionDAO transaccionDAO = new TransaccionDAO();
 		return contador;
 	}
 	
-	public List<Transaccion> devolverListaTransaccionFiltro()
-	{
-		Filtro contenedor;		
-		String codigoFiltro;
-		String valorFiltro;
-		String valorColumna;
-		
-		List<Transaccion> retorno;
-		List<Transaccion> filtrado = null;
-		retorno = transaccionDAO.devolverTransaccion();
-		
-		Transaccion transaccion = null;
-		for(int i = 0; i < cantidadTransaccion(); i++)
-		{    
-			Transaccion m = retorno.get(i);			
-			Iterator<Filtro> iterador = filtro.iterator();
-			while (iterador.hasNext())
-			{	
-				contenedor = iterador.next();
-				codigoFiltro = contenedor.getCodigo();
-				valorFiltro = contenedor.getValor();
-				if(codigoFiltro == "CONCEPTO")
-				{
-					valorColumna = m.getConcepto();
-					if(valorColumna.indexOf(valorFiltro) > -1)
-					{
-						filtrado.add(m);
-					}
-				}
-				else if(codigoFiltro == "NUMERO")
-				{					
-					if(m.getConcepto().indexOf(valorFiltro) > -1)
-					{
-						filtrado.add(m);
-					}
-				}				
-				else if(codigoFiltro == "EMPRESA")
-				{					
-					if(m.getConcepto().indexOf(valorFiltro) > -1)
-					{
-						filtrado.add(m);
-					}
-				}
-				else if(codigoFiltro == "FECHAEMISION") 
-				{					
-					if(m.getConcepto().indexOf(valorFiltro) > -1)
-					{
-						filtrado.add(m);
-					}
-				}else if(codigoFiltro == "SUBTOTAL")
-				{					
-					if(m.getConcepto().indexOf(valorFiltro) > -1)
-					{
-						filtrado.add(m);
-					}
-				}else if(codigoFiltro == "IGV")
-				{					
-					if(m.getConcepto().indexOf(valorFiltro) > -1)
-					{
-						filtrado.add(m);
-					}
-				}else if(codigoFiltro == "TOTAL")
-				{					
-					if(m.getConcepto().indexOf(valorFiltro) > -1)
-					{
-						filtrado.add(m);
-					}
-				}else if(codigoFiltro == "MONEDA")
-				{					
-					if(m.getConcepto().indexOf(valorFiltro) > -1)
-					{
-						filtrado.add(m);
-					}
-				}else if(codigoFiltro == "FECHAVENCIMIENTO")
-				{					
-					if(m.getConcepto().indexOf(valorFiltro) > -1)
-					{
-						filtrado.add(m);
-					}
-				}else if(codigoFiltro == "FECHAPAGO")
-				{					
-					if(m.getConcepto().indexOf(valorFiltro) > -1)
-					{
-						filtrado.add(m);
-					}
-				}else if(codigoFiltro == "OBSERVACIONES")
-				{					
-					if(m.getConcepto().indexOf(valorFiltro) > -1)
-					{
-						filtrado.add(m);
-					}
-				}else if(codigoFiltro == "TIPO")
-				{					
-					if(m.getConcepto().indexOf(valorFiltro) > -1)
-					{
-						filtrado.add(m);
-					}
-				}else if(codigoFiltro == "ESTADO")
-				{					
-					if(m.getConcepto().indexOf(valorFiltro) > -1)
-					{
-						filtrado.add(m);
-					}
-				}
-				else if(codigoFiltro == "NOMBREGRUPO")
-				{
-					if(m.getConcepto().indexOf(valorFiltro) > -1)
-					{
-						filtrado.add(m);
-					}
-				}				
-			}            
-		}	
-		
-		return filtrado; 
-	}
-
+	
 
 }

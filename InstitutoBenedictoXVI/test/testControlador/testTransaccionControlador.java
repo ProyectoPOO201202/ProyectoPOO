@@ -12,12 +12,10 @@ import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import controlador.RolControlador;
 import controlador.TransaccionControlador;
 import controlador.TransaccionControlador.TFiltro;
 import dominio.AutenticaUsuario;
 import dominio.Empresa;
-import dominio.Rol;
 import dominio.Transaccion;
 import dominio.DAO.DataBase;
 
@@ -45,8 +43,7 @@ public class testTransaccionControlador {
 		{			
 			fechaAhora = new Date();			
 			testTransaccionControlador.registrarTransaccion("CONCEPTO " + i, String.valueOf(i)  , fechaAhora.toString(), proveedor.getCodigo(), "100", "18", "118", "S/.", fechaAhora.toString(), fechaAhora.toString(), "ninguna", "VENTA", "NUEVO");					
-		}	
-		
+		}			
 	}
 	
 	
@@ -58,11 +55,11 @@ public class testTransaccionControlador {
 		List<Transaccion> testTransaccion;
 		countRegistro = testTransaccionControlador.cantidadTransaccion();
 		testTransaccionControlador.addFiltro(testFiltro.CONCEPTO, "105");
+		testTransaccionControlador.addFiltro(testFiltro.CONCEPTO, "103");
 		testTransaccion = testTransaccionControlador.devolverListaTransaccionFiltro();
 		countRegistro = testTransaccion.size();
-		Assert.assertEquals(1, countRegistro);
+		Assert.assertEquals(2, countRegistro);
 	}
-	
 	
 
 }

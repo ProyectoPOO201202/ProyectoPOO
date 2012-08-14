@@ -38,8 +38,7 @@ public class testEmpresaControlador {
 		for(int i=10001; i<=10015; i++)
 		{
 			proveedorControlador.registrarEmpresa("205498" + i, "RZ " + i, "Pesquera", "Direccion " + i ,"contacto@rz" + i + ".com.pe" , "61" + i, "Lima", "Peru", "Activo", "");			
-		}	
-		
+		}			
 	}
 	
 	@Test

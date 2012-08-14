@@ -31,7 +31,7 @@ public class TransaccionTest {
 		DateTime fechaEmision = new DateTime(2012, 07, 21, 0, 0, 0, 0);
 		DateTime fechaVencimiento = new DateTime(2012, 8, 21, 0, 0, 0, 0);
 		DateTime fechaPago = new DateTime(2012, 07, 30, 0, 0, 0); 
-		Transaccion prueba = new Transaccion("Grupo de Estudio Alpha", 1, fechaEmision, "89674532121", 180, 28.8, 188.8, monedaSoles.getDescripcion(), fechaVencimiento, fechaPago, "Pedido Inicial", Tipo.VENTA, Estado.NUEVO);		
+		Transaccion prueba = new Transaccion("Grupo de Estudio Alpha", 1, fechaEmision.toString(), "89674532121", 180, 28.8, 188.8, monedaSoles.getDescripcion(), fechaVencimiento.toString(), fechaPago.toString(), "Pedido Inicial", Tipo.VENTA, Estado.NUEVO);		
 		Assert.assertEquals(1, prueba.getNumero());
 		Assert.assertEquals("20176409076", prueba.getEmpresa());			
 	}	
@@ -44,7 +44,7 @@ public class TransaccionTest {
 		DateTime fechaVencimiento = new DateTime(2012, 07, 21, 0, 0, 0, 0);
 		DateTime fechaPago = new DateTime(2012, 07, 21, 0, 0, 0, 0);
 		
-		Transaccion prueba = new Transaccion("Libreria", 1, fechaEmision, "20100070970", 80, 14.4, 94.4, monedaSoles.getDescripcion(), fechaVencimiento, fechaPago, "Orden Inicial",Tipo.COMPRA,Estado.NUEVO);
+		Transaccion prueba = new Transaccion("Libreria", 1, fechaEmision.toString(), "20100070970", 80, 14.4, 94.4, monedaSoles.getDescripcion(), fechaVencimiento.toString(), fechaPago.toString(), "Orden Inicial",Tipo.COMPRA,Estado.NUEVO);
 		Assert.assertEquals("Libreria", prueba.getConcepto());
 		Assert.assertEquals(1, prueba.getNumero());
 		Assert.assertEquals(fechaEmision, prueba.getFechaEmision());
