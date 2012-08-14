@@ -20,7 +20,7 @@ import com.csvreader.CsvReader;
 public class testGrupoEstudioControlador {
 	private DataBase bdMock;
 	private GrupoEstudioControlador proveedorControlador;
-	private List<GrupoEstudio> listaGrupoEstudio = new ArrayList<GrupoEstudio>();
+	private List<GrupoEstudio> listaEmpresas = new ArrayList<GrupoEstudio>();
 	
 	@Before
     public void setUp() throws Exception 
@@ -28,7 +28,7 @@ public class testGrupoEstudioControlador {
 		proveedorControlador = new GrupoEstudioControlador();
 		bdMock  = mock(DataBase.class);
 		proveedorControlador.setDataBase(bdMock);
-	    doReturn(listaGrupoEstudio).when(bdMock).tablaGrupoEstudio();
+	    doReturn(listaEmpresas).when(bdMock).tablaGrupoEstudio();
 		for(int i=10001; i<=10015; i++)
 		{
 			proveedorControlador.registrarGrupoEstudio("01" + i, "ff " + i, "Modulo1", 
@@ -63,7 +63,7 @@ public class testGrupoEstudioControlador {
 		assertEquals(15, proveedorControlador.cantidadGrupoEstudio());
 	}
 	
-	/*@Test
+	@Test
 	public void testImportarGrupoEstudio() throws ParametroIncompleto{
 		
 		proveedorControlador.limpiaListaGrupoEstudio();
@@ -104,5 +104,5 @@ public class testGrupoEstudioControlador {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}*/
+	}
 }
