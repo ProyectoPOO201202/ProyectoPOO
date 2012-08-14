@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import org.joda.time.DateTime;
-
 import com.csvreader.CsvReader;
 
 import dominio.Transaccion;
@@ -26,24 +24,21 @@ private TransaccionDAO transaccionDAO = new TransaccionDAO();
 			String moneda, String fechaVencimiento, String fechaPago,
 			String observaciones, String tipo, String estado) throws ParametroIncompleto
 		{
-		int numero1 = Integer.parseInt(numero);
-		DateTime fechaEmision1 = DateTime.parse(fechaEmision);
+		int numero1 = Integer.parseInt(numero);		
 		double subtotal1 = Double.parseDouble(subtotal);
 		double igv1 = Double.parseDouble(igv);
 		double total1 = Double.parseDouble(total);
-		DateTime fechaVencimiento1 = DateTime.parse(fechaVencimiento);
-		DateTime fechaPago1 = DateTime.parse(fechaPago);
 		Tipo tipo1 = Tipo.valueOf(tipo); 
 		Estado estado1 = Estado.valueOf(estado);
 		
-		Transaccion rol = new Transaccion(concepto, numero1, fechaEmision1, empresa, subtotal1, igv1,  total1, moneda,  fechaVencimiento1,  fechaPago1, observaciones,  tipo1,  estado1);
+		Transaccion rol = new Transaccion(concepto, numero1, fechaEmision, empresa, subtotal1, igv1,  total1, moneda,  fechaVencimiento,  fechaPago, observaciones,  tipo1,  estado1);
 		transaccionDAO.crearTransaccion(rol);
 		return rol;
 	}
 	
-	 public Transaccion modificarTransaccion(String concepto, int numero, DateTime fechaEmision,
+	 public Transaccion modificarTransaccion(String concepto, int numero, String fechaEmision,
 				String empresa, double subtotal, double igv, double total,
-				String moneda, DateTime fechaVencimiento, DateTime fechaPago,
+				String moneda, String fechaVencimiento, String fechaPago,
 				String observaciones, Tipo tipo, Estado estado)
 	 {
 	    	Transaccion encontrado = busquedaTransaccionConcepto(concepto);
@@ -160,6 +155,123 @@ private TransaccionDAO transaccionDAO = new TransaccionDAO();
 			contador++;
 		}
 		return contador;
+	}
+	
+	public List<Transaccion> devolverListaTransaccionFiltro()
+	{
+		Filtro contenedor;		
+		String codigoFiltro;
+		String valorFiltro;
+		String valorColumna;
+		
+		List<Transaccion> retorno;
+		List<Transaccion> filtrado = null;
+		retorno = transaccionDAO.devolverTransaccion();
+		
+		Transaccion transaccion = null;
+		for(int i = 0; i < cantidadTransaccion(); i++)
+		{    
+			Transaccion m = retorno.get(i);			
+			Iterator<Filtro> iterador = filtro.iterator();
+			while (iterador.hasNext())
+			{	
+				contenedor = iterador.next();
+				codigoFiltro = contenedor.getCodigo();
+				valorFiltro = contenedor.getValor();
+				if(codigoFiltro == "CONCEPTO")
+				{
+					valorColumna = m.getConcepto();
+					if(valorColumna.indexOf(valorFiltro) > -1)
+					{
+						filtrado.add(m);
+					}
+				}
+				else if(codigoFiltro == "NUMERO")
+				{					
+					if(m.getConcepto().indexOf(valorFiltro) > -1)
+					{
+						filtrado.add(m);
+					}
+				}				
+				else if(codigoFiltro == "EMPRESA")
+				{					
+					if(m.getConcepto().indexOf(valorFiltro) > -1)
+					{
+						filtrado.add(m);
+					}
+				}
+				else if(codigoFiltro == "FECHAEMISION") 
+				{					
+					if(m.getConcepto().indexOf(valorFiltro) > -1)
+					{
+						filtrado.add(m);
+					}
+				}else if(codigoFiltro == "SUBTOTAL")
+				{					
+					if(m.getConcepto().indexOf(valorFiltro) > -1)
+					{
+						filtrado.add(m);
+					}
+				}else if(codigoFiltro == "IGV")
+				{					
+					if(m.getConcepto().indexOf(valorFiltro) > -1)
+					{
+						filtrado.add(m);
+					}
+				}else if(codigoFiltro == "TOTAL")
+				{					
+					if(m.getConcepto().indexOf(valorFiltro) > -1)
+					{
+						filtrado.add(m);
+					}
+				}else if(codigoFiltro == "MONEDA")
+				{					
+					if(m.getConcepto().indexOf(valorFiltro) > -1)
+					{
+						filtrado.add(m);
+					}
+				}else if(codigoFiltro == "FECHAVENCIMIENTO")
+				{					
+					if(m.getConcepto().indexOf(valorFiltro) > -1)
+					{
+						filtrado.add(m);
+					}
+				}else if(codigoFiltro == "FECHAPAGO")
+				{					
+					if(m.getConcepto().indexOf(valorFiltro) > -1)
+					{
+						filtrado.add(m);
+					}
+				}else if(codigoFiltro == "OBSERVACIONES")
+				{					
+					if(m.getConcepto().indexOf(valorFiltro) > -1)
+					{
+						filtrado.add(m);
+					}
+				}else if(codigoFiltro == "TIPO")
+				{					
+					if(m.getConcepto().indexOf(valorFiltro) > -1)
+					{
+						filtrado.add(m);
+					}
+				}else if(codigoFiltro == "ESTADO")
+				{					
+					if(m.getConcepto().indexOf(valorFiltro) > -1)
+					{
+						filtrado.add(m);
+					}
+				}
+				else if(codigoFiltro == "NOMBREGRUPO")
+				{
+					if(m.getConcepto().indexOf(valorFiltro) > -1)
+					{
+						filtrado.add(m);
+					}
+				}				
+			}            
+		}	
+		
+		return filtrado; 
 	}
 
 

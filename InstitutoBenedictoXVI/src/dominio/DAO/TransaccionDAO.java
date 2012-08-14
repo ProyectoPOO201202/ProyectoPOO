@@ -3,8 +3,6 @@ package dominio.DAO;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.joda.time.DateTime;
-
 import dominio.Transaccion;
 import dominio.Transaccion.Estado;
 import dominio.Transaccion.Tipo;
@@ -21,9 +19,9 @@ public class TransaccionDAO {
         bdMock.tablaTransaccion().add(transaccion);
     }
     
-    public void modificarTransaccion(String concepto, int numero, DateTime fechaEmision,
+    public void modificarTransaccion(String concepto, int numero, String fechaEmision,
 			String empresa, double subtotal, double igv, double total,
-			String moneda, DateTime fechaVencimiento, DateTime fechaPago,
+			String moneda, String fechaVencimiento, String fechaPago,
 			String observaciones, Tipo tipo, Estado estado){
     	
     	Transaccion transaccion = obtenerTransaccionPorConcepto(concepto);

@@ -43,7 +43,7 @@ public class testRolControlador {
 		
 	}
 	
-	//@Test
+	@Test
 	public void testBusquedaCodigoOk()
 	{
 		Rol test1;
@@ -51,7 +51,7 @@ public class testRolControlador {
 		Assert.assertEquals("R113", test1.getCodigo());
 	}
 	
-	//@Test
+	@Test
 	public void testBusquedaCodigoKO()
 	{
 		Rol test1;
@@ -59,7 +59,7 @@ public class testRolControlador {
 		Assert.assertEquals("R180", test1.getCodigo());
 	}
 	
-	//@Test
+	@Test
 	public void testBusquedaDescripcionOk()
 	{
 		List<Rol> test2;
@@ -69,7 +69,7 @@ public class testRolControlador {
 		Assert.assertEquals("R105", codigo);
 	}
 	
-	//@Test
+	@Test
 	public void testBusquedaDescripcionKo()
 	{
 		List<Rol> test2;
@@ -79,7 +79,7 @@ public class testRolControlador {
 		Assert.assertEquals("R108", codigo);
 	}
 	
-	//@Test
+	@Test
 	public void testAgregarRol()
 	{
 		fechaAhora = new Date();
@@ -104,7 +104,7 @@ public class testRolControlador {
 	}
 	
 	
-	//@Test
+	@Test
 	public void testModificarRolAcceso()
 	{
 		Rol testRol;
@@ -123,6 +123,4 @@ public class testRolControlador {
 		resultado = testRolControlador.eliminarRol("R106");
 		Assert.assertEquals("El rol fue eliminado", true, resultado);
 	}
-	
-
 }

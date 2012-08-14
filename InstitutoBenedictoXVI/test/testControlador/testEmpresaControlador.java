@@ -42,7 +42,7 @@ public class testEmpresaControlador {
 		
 	}
 	
-	//@Test
+	@Test
 	public void testListarEmpresasRegistradas(){
 		
 		List<Empresa> empresas = new ArrayList<Empresa>();
@@ -54,7 +54,7 @@ public class testEmpresaControlador {
 		assertEquals(15, proveedorControlador.cantidadEmpresas());
 	}
 	
-	//@Test
+	@Test
 	public void testImportarEmpresa(){
 		
 		proveedorControlador.limpiaListaEmpresa();
@@ -93,7 +93,7 @@ public class testEmpresaControlador {
 	}
 
 
-	//@Test
+	@Test
 	public void testModificarEmpresa(){
 		
 		try {
@@ -110,7 +110,7 @@ public class testEmpresaControlador {
 		}	
 	}
 	
-	//@Test
+	@Test
 	public void testEliminarEmpresaOk(){
 		int cantidadInicial = 0;
 		int cantidadFinal = 0;
@@ -128,7 +128,7 @@ public class testEmpresaControlador {
 		}		
 	}
 	
-	//@Test
+	@Test
 	public void testEliminarEmpresaKo(){
 		int cantidadInicial = 0;
 		int cantidadFinal = 0;

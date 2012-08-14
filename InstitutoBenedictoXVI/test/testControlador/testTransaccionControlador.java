@@ -40,7 +40,7 @@ public class testTransaccionControlador {
 		proveedor = new  Empresa("20549810009","RZ20549810009","PESQUERA","Direccion Empresa 10007","contacto@RZ20549810009.com.pe","6188007","Lima","Peru","Activo","");
 		bdMock  = mock(DataBase.class);
 		testTransaccionControlador.setDataBase(bdMock);
-	    doReturn(listaTransaccion).when(bdMock).tablaRol();
+	    doReturn(listaTransaccion).when(bdMock).tablaTransaccion();
 		for(int i=101; i<=115; i++)
 		{			
 			fechaAhora = new Date();			
@@ -53,8 +53,14 @@ public class testTransaccionControlador {
 	@Test
 	public void testBusquedaTransaccion()
 	{
+		int countRegistro = 0;
 		TFiltro testFiltro = null;
+		List<Transaccion> testTransaccion;
+		countRegistro = testTransaccionControlador.cantidadTransaccion();
 		testTransaccionControlador.addFiltro(testFiltro.CONCEPTO, "105");
+		testTransaccion = testTransaccionControlador.devolverListaTransaccionFiltro();
+		countRegistro = testTransaccion.size();
+		Assert.assertEquals(1, countRegistro);
 	}
 	
 	

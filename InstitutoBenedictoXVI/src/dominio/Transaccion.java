@@ -1,18 +1,14 @@
 package dominio;
 
 
-
-import org.joda.time.DateTime;
-
-
 public class Transaccion {
 	
 public enum Tipo {COMPRA,VENTA}
 public enum Estado {NUEVO,ANULADA,CANCELADA}
 
-public Transaccion(String concepto, int numero, DateTime fechaEmision2,
+public Transaccion(String concepto, int numero, String fechaEmision2,
 			String empresa, double subtotal, double igv, double total,
-			String moneda, DateTime fechaVencimiento2, DateTime fechaPago2,
+			String moneda, String fechaVencimiento2, String fechaPago2,
 			String observaciones, Tipo tipo, Estado estado) throws ParametroIncompleto {
 	super();
 	if (concepto.equals(""))
@@ -63,13 +59,13 @@ public Transaccion(String concepto, int numero, DateTime fechaEmision2,
 	private String concepto;	
 	private int numero;
 	private String empresa;
-	private DateTime fechaEmision;	
+	private String fechaEmision;	
 	private double subtotal;
 	private double igv;
 	private double total;
 	private String moneda;
-	private DateTime fechaVencimiento;
-	private DateTime fechaPago;
+	private String fechaVencimiento;
+	private String fechaPago;
 	private String observaciones;
 	private Tipo tipo;	
 	private Estado estado;	
@@ -86,10 +82,10 @@ public Transaccion(String concepto, int numero, DateTime fechaEmision2,
 	public void setNumero(int numero) {
 		this.numero = numero;
 	}
-	public DateTime getFechaEmision() {
+	public String getFechaEmision() {
 		return fechaEmision;
 	}
-	public void setFechaEmision(DateTime fechaEmision) {
+	public void setFechaEmision(String fechaEmision) {
 		this.fechaEmision = fechaEmision;
 	}
 	public String getEmpresa() {
@@ -122,16 +118,16 @@ public Transaccion(String concepto, int numero, DateTime fechaEmision2,
 	public void setMoneda(String moneda) {
 		this.moneda = moneda;
 	}
-	public DateTime getFechaVencimiento() {
+	public String getFechaVencimiento() {
 		return fechaVencimiento;
 	}
-	public void setFechaVencimiento(DateTime fechaVencimiento) {
+	public void setFechaVencimiento(String fechaVencimiento) {
 		this.fechaVencimiento = fechaVencimiento;
 	}
-	public DateTime getFechaPago() {
+	public String getFechaPago() {
 		return fechaPago;
 	}
-	public void setFechaPago(DateTime fechaPago) {
+	public void setFechaPago(String fechaPago) {
 		this.fechaPago = fechaPago;
 	}
 	public String getObservaciones() {
