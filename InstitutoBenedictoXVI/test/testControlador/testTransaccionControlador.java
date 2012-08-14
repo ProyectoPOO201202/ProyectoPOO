@@ -48,7 +48,7 @@ public class testTransaccionControlador {
 	
 	
 	@Test
-	public void testBusquedaTransaccion()
+	public void testBusquedaTransaccionOk()
 	{
 		int countRegistro = 0;
 		TFiltro testFiltro = null;
@@ -61,5 +61,17 @@ public class testTransaccionControlador {
 		Assert.assertEquals(2, countRegistro);
 	}
 	
+	@Test
+	public void testBusquedaTransaccionKo()
+	{
+		int countRegistro = 0;
+		TFiltro testFiltro = null;
+		List<Transaccion> testTransaccion;
+		countRegistro = testTransaccionControlador.cantidadTransaccion();
+		testTransaccionControlador.addFiltro(testFiltro.ESTADO, "NUEVO");		
+		testTransaccion = testTransaccionControlador.devolverListaTransaccionFiltro();
+		countRegistro = testTransaccion.size();
+		Assert.assertEquals(0, countRegistro);
+	}
 
 }

@@ -24,7 +24,7 @@ public class TransaccionTest {
 		cliente.registrarEmpresa("20100070970", "SPSA", "Retail", "Calle Tulipanes 468", "logistica@spsa.com.pe", "4356789", "Lima", "Peru", "Activa", "");		
 	}
 	
-	//@Test // Venta
+	@Test // Venta
 	public void testMetodoGeneral() throws ParametroIncompleto {	
 	
 		Moneda monedaSoles = new Moneda("S", "Soles");
