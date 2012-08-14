@@ -74,7 +74,7 @@ public class ClienteControladorTest {
 	}	    
 		    
 
-//@Test
+@Test
 //Lista de todos los clientes
 	public void testListarClienteRegistradas(){
 		

@@ -61,7 +61,6 @@ public class PersonaControladorTest {
 			}
 		 
 	}	    
-		    
 	
 	@Test
 	public void testListarProspectoRegistradas(){
@@ -69,13 +68,13 @@ public class PersonaControladorTest {
 		List<Prospecto> prospecto = new ArrayList<Prospecto>();
 		prospecto = personaControlador.devolverListaProspecto();
 		for(Prospecto prospectos : prospecto){
-			System.out.println(prospectos.getDni() + " " + prospectos.getApellido_Paterno());
+			System.out.println(prospectos.getDni() + " " + prospectos.getApellido_Paterno() + " " + prospectos.getApellido_Materno() + " " + prospectos.getTelefono() + " " + prospectos.getCorreo() + " " + prospectos.getDireccion() );
 		}
 		System.out.println("Total de Prospecto registradas : " + personaControlador.devolverCantidadProspecto());
 		assertEquals(15, personaControlador.devolverCantidadProspecto());
 	}
-	
 	/*
+	
 	@Test
 	public void testMostrarDatosProspecto(){
 				Prospecto prospecto = personaControlador.obtenerProspectoPorDni("dni10005");
