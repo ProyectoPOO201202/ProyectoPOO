@@ -28,7 +28,7 @@
 			<category>bundle=!org.cloudfoundry.ide.eclipse.feature.group</category>
 			<guid isPermaLink="false">cloud-foundry-integration-110-released</guid>
 		</item>
-
+<!--
 		<item>
             <title>Thanks for installing STS 3.0.0.M3</title>
             <link>http://www.springsource.com/products/sts</link>
@@ -38,7 +38,7 @@
 			<li bindent="3"><a href="http://download.springsource.com/release/STS/doc/STS-new_and_noteworthy-3.0.0.M3.pdf">3.0.0.M3 New &amp; Noteworthy</a></li><p></p></form>]]></description>
             <pubDate>Mon, 9 Jul 2012 12:13:33 +0100</pubDate>
 			<category>version=[3.0.0.201207050648-M3,3.1.0)</category>
-<!--            <category>severity=important</category> -->
+            <category>severity=important</category>
 	        <guid isPermaLink="false">thanks-for-installing-sts-300m3</guid>
 		</item>
 		
@@ -51,32 +51,32 @@
 			<li bindent="3"><a href="http://download.springsource.com/release/STS/doc/STS-new_and_noteworthy-3.0.0.M3.pdf">3.0.0.M3 New &amp; Noteworthy</a></li><p></p></form>]]></description>
         	<pubDate>Mon, 9 Jul 2012 12:12:33 +0100</pubDate>
 			<category>version=[0,3.0.0.201207050648-M3)</category>
-<!--			<category>severity=important</category> -->
+			<category>severity=important</category>
 			<guid isPermaLink="false">sts-300m3-released</guid>
 		</item>
-
+-->
 		<item>
-            <title>Thanks for installing STS 2.9.2</title>
-            <link>http://www.springsource.com/products/sts</link>
-            <description><![CDATA[<form><p><a href="http://springsource.com">SpringSource</a> has released an update to SpringSource Tool Suite (STS), the best Eclipse-powered development environment for building Spring, Groovy and Grails powered enterprise application.</p>
+            <title>Thanks for installing STS 3.0.0</title>
+            <link>http://www.springsource.org/sts</link>
+            <description><![CDATA[<form><p><a href="http://springsource.com">SpringSource</a> has released an update to Spring Tool Suite (STS), the best Eclipse-powered development environment for building Spring powered enterprise application.</p>
 		<p>Please review the following documents:</p>
-		<li bindent="3"><a href="http://download.springsource.com/release/STS/doc/STS-new_and_noteworthy-2.9.2.RELEASE.pdf">2.9.2 New &amp; Noteworthy</a></li><p></p></form>]]></description>
-            <pubDate>Thu, 24 May 2012 12:13:33 +0100</pubDate>
-			<category>version=[2.9.2.201205071000-RELEASE,3.0.0)</category>
+		<li bindent="3"><a href="http://download.springsource.com/release/STS/doc/STS-new_and_noteworthy-3.0.0.RELEASE.pdf">3.0.0 New &amp; Noteworthy</a></li><p></p></form>]]></description>
+            <pubDate>Mon, 13 Aug 2012 12:13:33 +0100</pubDate>
+			<category>version=[3.0.0.201208091018-RELEASE,3.1.0)</category>
 		<!--            <category>severity=important</category>-->
-	        <guid isPermaLink="false">thanks-for-installing-sts-291</guid>
+	        <guid isPermaLink="false">thanks-for-installing-sts-300</guid>
 		</item>
 		
 		<item>
-			<title>STS 2.9.2 has been released</title>
-			<link>http://www.springsource.com/products/sts</link>
-			<description><![CDATA[<form><p><a href="http://springsource.com">SpringSource</a> has released an update to SpringSource Tool Suite (STS), the best Eclipse-powered development environment for building Spring, Groovy and Grails powered enterprise application.</p><p>It is recommend to update as soon as possible.</p>
+			<title>STS 3.0.0 has been released</title>
+			<link>http://www.springsource.org/sts</link>
+			<description><![CDATA[<form><p><a href="http://springsource.com">SpringSource</a> has released an update to Spring Tool Suite (STS), the best Eclipse-powered development environment for building Spring powered enterprise application.</p><p>It is recommend to update as soon as possible.</p>
 		<p>Please review the following documents:</p>
-		<li bindent="3"><a href="http://download.springsource.com/release/STS/doc/STS-new_and_noteworthy-2.9.2.RELEASE.pdf">2.9.2 New &amp; Noteworthy</a></li><p></p></form>]]></description>
-        	<pubDate>Thu, 24 May 2012 12:12:33 +0100</pubDate>
-			<category>version=[0,2.9.2.201205071000-RELEASE)</category>
-<!--			<category>severity=important</category> -->
-			<guid isPermaLink="false">sts-291-released</guid>
+		<li bindent="3"><a href="http://download.springsource.com/release/STS/doc/STS-new_and_noteworthy-3.0.0.RELEASE.pdf">3.0.0 New &amp; Noteworthy</a></li><p></p></form>]]></description>
+        	<pubDate>Mon, 13 Aug 2012 12:12:33 +0100</pubDate>
+			<category>version=[0,3.0.0.201208091018-RELEASE)</category>
+			<category>severity=important</category>
+			<guid isPermaLink="false">sts-300-released</guid>
 		</item>
 <!--
 		<item>

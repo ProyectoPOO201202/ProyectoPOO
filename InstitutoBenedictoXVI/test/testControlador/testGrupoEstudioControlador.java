@@ -6,7 +6,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
+import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.mock;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,11 +15,12 @@ import controlador.GrupoEstudioControlador;
 import dominio.GrupoEstudio;
 import dominio.ParametroIncompleto;
 import dominio.DAO.DataBase;
+import com.csvreader.CsvReader;
 
 public class testGrupoEstudioControlador {
 	private DataBase bdMock;
 	private GrupoEstudioControlador proveedorControlador;
-	private List<GrupoEstudio> listaEmpresas = new ArrayList<GrupoEstudio>();
+	private List<GrupoEstudio> listaGrupoEstudio = new ArrayList<GrupoEstudio>();
 	
 	@Before
     public void setUp() throws Exception 
@@ -26,7 +28,7 @@ public class testGrupoEstudioControlador {
 		proveedorControlador = new GrupoEstudioControlador();
 		bdMock  = mock(DataBase.class);
 		proveedorControlador.setDataBase(bdMock);
-	    doReturn(listaEmpresas).when(bdMock).tablaGrupoEstudio();
+	    doReturn(listaGrupoEstudio).when(bdMock).tablaGrupoEstudio();
 		for(int i=10001; i<=10015; i++)
 		{
 			proveedorControlador.registrarGrupoEstudio("01" + i, "ff " + i, "Modulo1", 
@@ -34,11 +36,9 @@ public class testGrupoEstudioControlador {
 					"30-02-2012" + i, "Juan Perez" + i, "http:\\linkestudios"+ i, 
 					"La Marina"+ i, "322"+ i, "xxxx"+ i,"EN_CURSO" + i);			
 		}	
-		
 	}
 
-
-	//@Test
+	@Test
 	public void testListarGrupoEstudioRegistradas(){
 		
 		List<GrupoEstudio> grupoestudio = new ArrayList<GrupoEstudio>();
@@ -63,7 +63,7 @@ public class testGrupoEstudioControlador {
 		assertEquals(15, proveedorControlador.cantidadGrupoEstudio());
 	}
 	
-	@Test
+	/*@Test
 	public void testImportarGrupoEstudio() throws ParametroIncompleto{
 		
 		proveedorControlador.limpiaListaGrupoEstudio();
@@ -97,7 +97,6 @@ public class testGrupoEstudioControlador {
 						
 				contador++;
 			}
-	
 			proveedor3.close();
 			
 		} catch (FileNotFoundException e) {
@@ -105,8 +104,5 @@ public class testGrupoEstudioControlador {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}
-	//prueba
-	
-	
+	}*/
 }

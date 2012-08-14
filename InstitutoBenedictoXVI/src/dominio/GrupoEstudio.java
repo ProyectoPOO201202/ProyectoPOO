@@ -5,8 +5,9 @@ import java.util.Iterator;
 import java.util.List;
 
 import controlador.Filtro;
+import controlador.TransaccionControlador.TFiltro;
 
-import dominio.Transaccion.TFiltro;
+
 
 public class GrupoEstudio {
 	
