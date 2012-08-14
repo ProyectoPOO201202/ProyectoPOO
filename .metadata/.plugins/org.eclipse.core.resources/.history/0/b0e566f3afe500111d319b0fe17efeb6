@@ -63,7 +63,7 @@ public class testGrupoEstudioControlador {
 		assertEquals(15, proveedorControlador.cantidadGrupoEstudio());
 	}
 	
-	/*@Test
+	@Test
 	public void testImportarGrupoEstudio() throws ParametroIncompleto{
 		
 		proveedorControlador.limpiaListaGrupoEstudio();
@@ -74,7 +74,7 @@ public class testGrupoEstudioControlador {
 			List<GrupoEstudio> proveedor = new ArrayList<GrupoEstudio>();
 			proveedor = proveedorControlador.devolverListaGrupoEstudio();
 			
-			int contador = 0;
+			int contador = 1;
 			
 			CsvReader proveedor3 = new CsvReader("test/csv/GrupoEstudio_import.csv");	
 			proveedor3.readHeaders();
@@ -104,5 +104,5 @@ public class testGrupoEstudioControlador {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}*/
+	}
 }

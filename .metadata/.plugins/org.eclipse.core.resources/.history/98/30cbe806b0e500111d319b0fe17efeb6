@@ -63,7 +63,7 @@ public class testGrupoEstudioControlador {
 		assertEquals(15, proveedorControlador.cantidadGrupoEstudio());
 	}
 	
-	/*@Test
+	@Test
 	public void testImportarGrupoEstudio() throws ParametroIncompleto{
 		
 		proveedorControlador.limpiaListaGrupoEstudio();
@@ -104,5 +104,5 @@ public class testGrupoEstudioControlador {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}*/
+	}
 }

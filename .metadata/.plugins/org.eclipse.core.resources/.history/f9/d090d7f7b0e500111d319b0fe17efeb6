@@ -38,7 +38,7 @@ public class testGrupoEstudioControlador {
 		}	
 	}
 
-	@Test
+	/*@Test
 	public void testListarGrupoEstudioRegistradas(){
 		
 		List<GrupoEstudio> grupoestudio = new ArrayList<GrupoEstudio>();
@@ -61,13 +61,13 @@ public class testGrupoEstudioControlador {
 		}
 		System.out.println("Total Empresas registradas : " + proveedorControlador.devolverListaGrupoEstudio());
 		assertEquals(15, proveedorControlador.cantidadGrupoEstudio());
-	}
+	}*/
 	
-	/*@Test
+	@Test
 	public void testImportarGrupoEstudio() throws ParametroIncompleto{
 		
-		proveedorControlador.limpiaListaGrupoEstudio();
-		proveedorControlador.importarGrupoEstudio("test/csv/GrupoEstudio_import.csv");
+		//proveedorControlador.limpiaListaGrupoEstudio();
+		//proveedorControlador.importarGrupoEstudio("test/csv/GrupoEstudio_import.csv");
 		
 		try {
 					
@@ -104,5 +104,5 @@ public class testGrupoEstudioControlador {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}*/
+	}
 }
