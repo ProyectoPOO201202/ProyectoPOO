@@ -10,9 +10,11 @@ import java.util.List;
 import junit.framework.Assert;
 
 import org.junit.Before;
+import org.junit.Test;
 
 import controlador.RolControlador;
 import controlador.TransaccionControlador;
+import controlador.TransaccionControlador.TFiltro;
 import dominio.AutenticaUsuario;
 import dominio.Empresa;
 import dominio.Rol;
@@ -42,9 +44,17 @@ public class testTransaccionControlador {
 		for(int i=101; i<=115; i++)
 		{			
 			fechaAhora = new Date();			
-			testTransaccionControlador.registrarTransaccion("CONCEPTO " + i, String.valueOf(i)  , fechaAhora.toString(), "20549810009", "100", "18", "118", "S/.", fechaAhora.toString(), fechaAhora.toString(), "ninguna", "VENTA", "NUEVO")						
+			testTransaccionControlador.registrarTransaccion("CONCEPTO " + i, String.valueOf(i)  , fechaAhora.toString(), proveedor.getCodigo(), "100", "18", "118", "S/.", fechaAhora.toString(), fechaAhora.toString(), "ninguna", "VENTA", "NUEVO");					
 		}	
 		
+	}
+	
+	
+	@Test
+	public void testBusquedaTransaccion()
+	{
+		TFiltro testFiltro = null;
+		testTransaccionControlador.addFiltro(testFiltro.CONCEPTO, "105");
 	}
 	
 	

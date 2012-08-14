@@ -24,8 +24,13 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </enumeration>  
+<<<<<<< HEAD
   <class id="4" corner="BOTTOM_RIGHT" language="java" name="dominio.Filtro" project="InstitutoBenedictoXVI" 
     file="/InstitutoBenedictoXVI/src/dominio/Filtro.java" binary="false">    
+=======
+  <class id="4" corner="BOTTOM_RIGHT" language="java" name="controlador.Filtro" project="InstitutoBenedictoXVI" 
+    file="/InstitutoBenedictoXVI/src/controlador/Filtro.java" binary="false">    
+>>>>>>> 69c3565339cd7576885365e85353dfd5ddba2c05
     <position height="-1" width="-1" x="1901" y="982"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
